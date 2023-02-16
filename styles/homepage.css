@@ -46,8 +46,7 @@ background-color: lightgray;
 }
 #inbetweener{
     width: 15%;
-    border-style: none none none solid;
-    border-width: thick;
+    border-right: thick;
     border-color: black;
 }
 
