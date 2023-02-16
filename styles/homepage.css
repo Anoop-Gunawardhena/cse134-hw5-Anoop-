@@ -10,7 +10,7 @@ header{
     text-align: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding-bottom: 10;
     background: dimgray;
     border-style: solid;
     border-width: thin;
@@ -34,8 +34,9 @@ border-width: thin;
 }
 nav > li {
     border-style: solid;
-    border-width: thin;
+    border-width: thick;
     justify-content: center; 
+    text-align: center;
     align-items: center ;
     font-style: italic;
 }
