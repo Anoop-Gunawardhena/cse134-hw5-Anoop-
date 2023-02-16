@@ -19,10 +19,13 @@ border-width: thin;
 }
 #navlist{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
     font-size: 0.6em;
 }
 nav > li {
-    border-style: double;
+    border-style: solid;
+    border-width: thin;
     justify-content: center; 
     align-items: center ;
     font-style: italic;
