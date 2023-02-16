@@ -30,7 +30,7 @@ border-width: thin;
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
-    background: lightgray;
+    background-color: lightgray;
     font-size: 0.6em;
 }
 nav > li {
