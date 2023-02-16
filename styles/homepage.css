@@ -35,8 +35,8 @@ background-color: lightgray;
     list-style-position:inside;
 }
 .listitem{
-    border-left: thick;
-    border-right: thick;
+    border-left: solid;
+    border-right: solid;
     border-color: black;
     padding-left: 12%;
     padding-right: 12%;
