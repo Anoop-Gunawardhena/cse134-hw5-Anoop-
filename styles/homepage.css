@@ -36,7 +36,8 @@ border-width: thin;
 }
 .listitem{
     border-style: solid;
-    border-width: thick;
+    border-left: thick;
+    padding-left: 20%;
     background-color: lightgray;
     justify-content: center; 
     text-align: center;
