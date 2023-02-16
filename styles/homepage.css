@@ -33,7 +33,7 @@ border-width: thin;
     background-color: lightgray;
     font-size: 0.6em;
 }
-nav > ol >li {
+li {
     border-style: solid;
     border-width: thick;
     background-color: lightgray;
