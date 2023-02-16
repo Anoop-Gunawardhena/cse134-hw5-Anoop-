@@ -6,6 +6,7 @@
 body {
 background-color: darksalmon;
 display: flex;
+flex-direction: column;
 font-family: "csrocky";
 }
 
