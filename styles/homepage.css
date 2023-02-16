@@ -35,15 +35,16 @@ background-color: lightgray;
     list-style-position:inside;
 }
 .listitem{
-    border-left: solid;
-    border-right: solid;
-    border-width: thick;
-    border-color: black;
     justify-content: center; 
     text-align: center;
     align-items: center;
     font-style: italic;
     width: 20%;
     height: 100%;
+}
+#seperator{
+    height: 100%;
+    width:4px;
+    color: black;
 }
 
