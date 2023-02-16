@@ -30,7 +30,7 @@ background-color: lightgray;
 #navlist{
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-around; 
     font-size: 0.6em;
     list-style-position:inside;
     height: 100%;
@@ -41,12 +41,12 @@ background-color: lightgray;
     text-align: center;
     align-items: center;
     font-style: italic;
-    width: 10%;
+    width: 20%;
     height: 100%;
 }
-#seperator{
-    height:15px;
-    width: 15px;
-    background-color: black;
+#inbetweener{
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
 }
 
