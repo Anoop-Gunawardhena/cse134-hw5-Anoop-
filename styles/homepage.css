@@ -6,6 +6,9 @@
 @counter-style{
     fallback: 
 }
+header{
+    text-align: center;
+}
 body {
 background-color: darksalmon;
 display: flex;
