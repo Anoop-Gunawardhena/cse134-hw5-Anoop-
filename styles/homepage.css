@@ -44,8 +44,8 @@ background-color: lightgray;
     height: 100%;
 }
 #seperator{
-    height: auto;
-    width:4px;
+    height: 100%;
+    width:5%;
     color: black;
 }
 
