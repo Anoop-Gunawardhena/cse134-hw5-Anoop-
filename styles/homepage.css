@@ -45,8 +45,9 @@ background-color: lightgray;
     height: 100%;
 }
 #inbetweener{
-    border-style: solid;
-    border-width: thin;
+    width: 15%;
+    border-style: none none none solid;
+    border-width: thick;
     border-color: black;
 }
 
