@@ -33,6 +33,7 @@ background-color: lightgray;
     justify-content: space-between; 
     font-size: 0.6em;
     list-style-position:inside;
+    width: 100%
 }
 .listitem{
     border-left: solid;
