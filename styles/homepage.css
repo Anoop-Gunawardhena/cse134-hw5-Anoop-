@@ -37,7 +37,7 @@ background-color: lightgray;
     width: 100%;
 }
 .listitem{
-    border-style: solid;
+    
     border-left: thick;
     border-right: thick;
     border-color: black;
