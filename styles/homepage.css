@@ -15,9 +15,9 @@ font-family: "csrocky",'Times New Roman';
 
 nav{
 display: flex;
-flex-direction: column;
 border-style: groove;
 border-width: thin;
+font-size: 0.4em;
 }
 nav > li {
     border-style: double;
