@@ -35,7 +35,7 @@ background-color: lightgray;
     list-style-position:inside;
     height: auto;
 }
-.listitem{
+.listitem{ 
     justify-content: center; 
     text-align: center;
     align-items: center;
@@ -45,7 +45,7 @@ background-color: lightgray;
 }
 #seperator{
     height: 100%;
-    width: 5%;
-    color: black;
+    width: 10px;
+    background-color: black;
 }
 
