@@ -33,15 +33,11 @@ background-color: lightgray;
     justify-content: space-between; 
     font-size: 0.6em;
     list-style-position:inside;
-    height: 100%;
-    width: 100%;
 }
 .listitem{
-    
     border-left: thick;
     border-right: thick;
     border-color: black;
-    height: 100%;
     padding-left: 12%;
     padding-right: 12%;
     justify-content: center; 
