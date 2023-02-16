@@ -36,6 +36,7 @@ border-width: thin;
 nav > li {
     border-style: solid;
     border-width: thick;
+    background-color: lightgray;
     justify-content: center; 
     text-align: center;
     align-items: center ;
