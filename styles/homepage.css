@@ -10,6 +10,9 @@ header{
     text-align: center;
     align-items: center;
     padding-bottom: 10px;
+    background-color: dimgrey;
+    border-style: solid;
+    border-width: thin;
 
 }
 body {
