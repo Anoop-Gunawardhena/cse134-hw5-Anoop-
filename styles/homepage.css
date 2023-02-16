@@ -14,10 +14,12 @@ font-family: "csrocky",'Times New Roman';
 }
 
 nav{
-display: flex;
 border-style: groove;
 border-width: thin;
-font-size: 0.4em;
+}
+#navlist{
+    display: flex;
+    font-size: 0.6em;
 }
 nav > li {
     border-style: double;
