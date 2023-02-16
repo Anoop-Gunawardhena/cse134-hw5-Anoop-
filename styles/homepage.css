@@ -39,6 +39,7 @@ background-color: lightgray;
     border-style: solid;
     border-left: thick;
     border-right: thick;
+    height: 100%;
     width: 25%;
     background-color: lightgray;
     justify-content: center; 
