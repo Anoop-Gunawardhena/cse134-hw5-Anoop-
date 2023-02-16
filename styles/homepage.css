@@ -25,6 +25,7 @@ font-family: "csrocky",'Times New Roman';
 nav{
 border-style: groove;
 border-width: thin;
+background-color: lightgray;
 }
 #navlist{
     display: flex;
@@ -37,7 +38,8 @@ border-width: thin;
 .listitem{
     border-style: solid;
     border-left: thick;
-    padding-left: 20%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
     background-color: lightgray;
     justify-content: center; 
     text-align: center;
