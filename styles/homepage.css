@@ -14,18 +14,21 @@ header{
     background: dimgray;
     border-style: solid;
     border-width: thin;
+    width: 100%;
 }
 body{
 background-color: darksalmon;
 display: flex;
 flex-direction: column;
 font-family: "csrocky",'Times New Roman';
+width: 100%;
 }
 
 nav{
 border-style: groove;
 border-width: thick;
 background-color: lightgray;
+width: 100%
 }
 #navlist{
     display: flex;
