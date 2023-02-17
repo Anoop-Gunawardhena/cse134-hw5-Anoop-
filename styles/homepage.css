@@ -10,7 +10,7 @@ header{
     text-align: center;
     align-items: center;
     display: block;
-    position: relative;
+    position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
