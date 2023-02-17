@@ -79,6 +79,7 @@ z-index: 999
     border-color: black;
 }
 #roosevelttings{
+    background-color: black;
     text-align: center;
     align-items: center;
     font-family: 'Montserrat','Monospace';
@@ -86,7 +87,6 @@ z-index: 999
     width: 100%;
     height: fit-content;
     color:antiquewhite;
-    background-color: black;
 }
 #rooseface{
     height: 100px;
