@@ -12,6 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20%;
+    overflow: hidden;
     font-family: "csrocky",'Times New Roman';
     width: 100%;
     }
@@ -77,7 +78,7 @@ height:fit-content;
     flex-direction: row;
     width: 100%;
     height:40%;
-    overflow: hidden;
+    
 }
 .belowbarimage{
     float: right;
