@@ -85,7 +85,7 @@ height:fit-content;
     height:fit-content;
     background-color: antiquewhite;
     border-style: solid;
-    border-width: thin;
+    border-width: medium;
     border-color: black;
 }
 .belowbarimage{
@@ -99,6 +99,7 @@ img{
     border-right-width: medium;
     border-style: solid;
     border-color: black;
+    margin-bottom: 0px;
 }
 .belowbarpar{
     float: left;
