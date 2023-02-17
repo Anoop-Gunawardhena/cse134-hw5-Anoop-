@@ -31,7 +31,7 @@ nav{
 border-style: groove;
 border-width: thick;
 background-color: lightgray;
-position: fixed;
+position: relative;
 left: 0;
 top: 10px;
 right: 0;
