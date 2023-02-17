@@ -87,6 +87,7 @@ z-index: 999
     flex-direction: row;
     width: 100%;
     height:fit-content;
+    background-color: antiquewhite;
     border-style: solid;
     border-width: medium;
     border-color: black;
@@ -96,23 +97,22 @@ z-index: 999
 }
 .belowbarimage{
     float: right;
-    max-width: 50%;
-    height: fit-content;
+    width: 50%;
+    height: auto;
    margin-bottom: 0px; 
 }
 picture>img{
     border-right-width: medium;
     border-style: solid;
     border-color: black;
-    width:100%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     margin-bottom: 0px;
 }
 .belowbarpar{
     float: left;
-    max-width: 50%;
+    width: 50%;
     height: fit-content;
-    background-color: antiquewhite;
     text-align:center;
       
 
