@@ -79,13 +79,15 @@ z-index: 999
     border-color: black;
 }
 #roosevelttings{
+    width: 100%;
+    height: fit-content;
     background-color: black;
+    position: relative;
+    top: -12px;
     text-align: center;
     align-items: center;
     font-family: 'Montserrat','Monospace';
     font-size: 1.7rem;
-    width: 100%;
-    height: fit-content;
     color:antiquewhite;
     padding: 10px;
 }
