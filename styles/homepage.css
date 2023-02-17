@@ -87,7 +87,6 @@ z-index: 999
     flex-direction: row;
     width: 100%;
     height:fit-content;
-    background-color: antiquewhite;
     border-style: solid;
     border-width: medium;
     border-color: black;
@@ -113,6 +112,7 @@ picture>img{
     float: left;
     width: 50%;
     height: fit-content;
+    background-color: antiquewhite;
     text-align:center;
       
 
