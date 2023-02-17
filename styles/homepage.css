@@ -92,10 +92,13 @@ height:fit-content;
     float: right;
     width: 50%;
    height: fit-content;
-   border-right-width: medium;
-   border-style: solid;
-   border-color: black;
+   
     
+}
+img{
+    border-right-width: medium;
+    border-style: solid;
+    border-color: black;
 }
 .belowbarpar{
     float: left;
@@ -112,11 +115,13 @@ p{
     text-align: center;
     text-justify: auto;
     position: relative;
-    top: 20%;
+    top: 30%;
 }
 
 main{
     font-family: 'Montserrat','Monospace';
     font-size: 2rem;
     text-align: center;
+    position: relative;
+    top: 20%;
 }
