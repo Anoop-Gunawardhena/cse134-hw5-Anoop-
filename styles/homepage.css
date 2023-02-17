@@ -73,6 +73,7 @@ height:fit-content;
 
 #belowbar{
     display: flex;
+    position: fixed;
     flex-direction: row;
     width: 100%;
     height:fit-content;
