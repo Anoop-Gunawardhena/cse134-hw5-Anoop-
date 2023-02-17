@@ -95,6 +95,7 @@ height:fit-content;
    border-radius: 2px;
    border-style: solid;
    border-color: black;
+   border-width: medium;
     
 }
 .belowbarpar{
@@ -105,8 +106,13 @@ height:fit-content;
 
 }
 p{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat','Monospace';
     font-size: 2rem;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    text-justify: auto;
+}
+
+m{
+    font-family: 'Montserrat','Monospace';
+    font-size: 2rem;
 }
