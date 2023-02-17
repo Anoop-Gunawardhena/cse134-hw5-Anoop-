@@ -85,8 +85,10 @@ height:fit-content;
 }
 .belowbarpar{
     float: left;
-    font-size:large;
     width: 50%;
     height: fit-content;
 
+}
+p{
+    font-size: 5em;
 }
