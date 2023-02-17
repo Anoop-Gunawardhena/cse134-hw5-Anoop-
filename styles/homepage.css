@@ -33,9 +33,8 @@ border-width: thick;
 background-color: lightgray;
 position: relative;
 display: block;
-left: 0;
-top: 20px;
-right: 0;
+left: 0px;
+top: 15px;
 }
 #navlist{
     display: flex;
