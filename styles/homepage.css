@@ -31,7 +31,7 @@ border-style: groove;
 border-width: thick;
 background-color: lightgray;
 position: fixed;
-top: 0.8em;
+top: 1em + 10px;
 bottom: auto;
 left: 0px;
 right: 0px;
