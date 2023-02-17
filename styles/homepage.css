@@ -3,9 +3,15 @@
     src: url("../fonts/Other/CsRocky-MVe9v.otf");
     font-size: 1em;
 }
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Other/Montserrat-VariableFont_wght.ttf");
+    font-size: 1em;;
+}
 @counter-style{
     fallback: 
 }
+
 
 body{
     background-color: darksalmon;
@@ -76,11 +82,18 @@ height:fit-content;
     flex-direction: row;
     width: 100%;
     height:fit-content;
+    background-color: antiquewhite;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
 }
 .belowbarimage{
     float: right;
     width: 50%;
    height: fit-content;
+   border-radius: 2px;
+   border-style: solid;
+   border-color: black;
     
 }
 .belowbarpar{
@@ -90,5 +103,6 @@ height:fit-content;
 
 }
 p{
+    font-family: 'Montserrat';
     font-size: 2rem;
 }
