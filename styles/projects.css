@@ -82,12 +82,20 @@ z-index: 999
     text-align: center;
     align-items: center;
     font-family: 'Montserrat','Monospace';
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     width: 100%;
-    color:antiquewhite
+    height: fit-content;
+    color:antiquewhite;
+    background-color: black;
 }
 #rooseface{
     height: 100px;
     width: 100px;
     border-radius: 30%;
+    border-color: silver;
+    border-style: ridge;
+}
+#roosevelt{
+    text-shadow: 2px 2px 4px whitesmoke;
+    text-decoration: wavy;
 }
