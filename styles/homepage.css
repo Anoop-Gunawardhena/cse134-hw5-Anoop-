@@ -93,6 +93,7 @@ z-index: 999
     border-color: black;
     padding: 0px;
     z-index: 990;
+    overflow: auto;
 }
 .belowbarimage{
     float: right;
