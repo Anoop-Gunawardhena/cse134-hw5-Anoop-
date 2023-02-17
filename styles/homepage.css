@@ -96,8 +96,8 @@ z-index: 999
 }
 .belowbarimage{
     float: right;
-    width: 50%;
-    height: auto;
+    max-width: 50%;
+    height: fit-content;
    margin-bottom: 0px; 
 }
 picture>img{
@@ -105,12 +105,12 @@ picture>img{
     border-style: solid;
     border-color: black;
     width:100%;
-    height: auto;
+    height: 100%;
     margin-bottom: 0px;
 }
 .belowbarpar{
     float: left;
-    width: 50%;
+    max-width: 50%;
     height: fit-content;
     background-color: antiquewhite;
     text-align:center;
