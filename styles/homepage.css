@@ -26,6 +26,8 @@ body{
     flex-direction: column;
     width:100%;
     height: fit-content;
+    position: fixed;
+    z-index: 999;
 }
 header{
     text-align: center;
@@ -88,6 +90,7 @@ height:fit-content;
     border-width: medium;
     border-color: black;
     padding: 0px;
+    z-index: 990;
 }
 .belowbarimage{
     float: right;
