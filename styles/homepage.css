@@ -21,7 +21,7 @@ header{
     display: block;
     position: fixed;
     top: 0px;
-    max-height: fit-content;
+    height:20px;
     background: dimgray;
     border-style: solid;
     border-width: thin;
@@ -33,7 +33,7 @@ border-style: groove;
 border-width: thick;
 background-color: lightgray;
 position: fixed;
-top: 115px;
+top: 20px;
 left: 0px;
 right: 0px;
 }
