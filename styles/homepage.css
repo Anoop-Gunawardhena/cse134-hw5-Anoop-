@@ -73,21 +73,20 @@ height:fit-content;
 
 #belowbar{
     display: flex;
-    position: fixed;
     flex-direction: row;
     width: 100%;
     height:fit-content;
-   
 }
 .belowbarimage{
-
-width: fit-content;
-height: fit-content;
+    float: right;
+    width: 50%;
+   height: fit-content;
     
 }
 .belowbarpar{
-    font-size: larger;
-    width: fit-content;
+    float: left;
+    font-size:large;
+    width: 50%;
     height: fit-content;
 
 }
