@@ -67,6 +67,8 @@ right: 0px;
 }
 
 #belowbar{
-    position: static;
+    position: relative;
+    top: -14px;
+    
 }
 
