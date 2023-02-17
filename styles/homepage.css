@@ -87,6 +87,7 @@ height:fit-content;
     border-style: solid;
     border-width: medium;
     border-color: black;
+    padding: 0px;
 }
 .belowbarimage{
     float: right;
