@@ -100,3 +100,10 @@ z-index: 999
     text-shadow: 2px 2px 4px whitesmoke;
     text-decoration: wavy;
 }
+.grow { 
+    transition: all .2s ease-in-out; 
+    }
+    
+.grow:hover { 
+transform: scale(1.1); 
+}
