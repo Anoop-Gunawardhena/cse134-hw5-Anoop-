@@ -82,7 +82,7 @@ height:fit-content;
 .belowbarimage{
     float: right;
     width: 50%;
-    height: auto;
+    height: 100%;
     
 }
 .belowbarpar{
