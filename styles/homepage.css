@@ -33,6 +33,7 @@ border-width: thick;
 background-color: lightgray;
 display: block;
 position: fixed;
+top: 200px;
 left: 0px;
 right: 0px;
 
