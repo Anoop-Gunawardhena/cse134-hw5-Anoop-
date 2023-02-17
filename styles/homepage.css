@@ -13,7 +13,6 @@ body{
     flex-direction: column;
     font-family: "csrocky",'Times New Roman';
     width: 100%;
-
     }
     
 header{
@@ -24,7 +23,6 @@ header{
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: 15px;
     background: dimgray;
     border-style: solid;
     border-width: thin;
