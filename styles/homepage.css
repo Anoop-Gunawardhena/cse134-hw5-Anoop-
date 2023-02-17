@@ -102,7 +102,8 @@ height:fit-content;
     width: 50%;
     height: fit-content;
     text-align:center;
-    padding: 10%   
+    position: relative;
+    top: 10%;   
 
 }
 p{
