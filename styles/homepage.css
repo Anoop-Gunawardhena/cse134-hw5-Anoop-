@@ -97,7 +97,7 @@ z-index: 999
 .belowbarimage{
     float: right;
     max-width: 50%;
-   height: fit-content;
+   height: 100%;
    margin-bottom: 0px; 
 }
 picture>img{
@@ -110,7 +110,7 @@ picture>img{
 .belowbarpar{
     float: left;
     max-width: 50%;
-    height: fit-content;
+    height: 100%;
     text-align:center;
       
 
