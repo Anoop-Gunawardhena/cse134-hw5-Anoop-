@@ -23,6 +23,7 @@ header{
     top: 0px;
     left: 0px;
     right: 0px;
+    bottom: 15px;
     background: dimgray;
     border-style: solid;
     border-width: thin;
