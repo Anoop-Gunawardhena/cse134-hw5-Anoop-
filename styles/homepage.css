@@ -96,21 +96,21 @@ z-index: 999
 }
 .belowbarimage{
     float: right;
-    max-width: 50%;
-   height: 100%;
+    width: 50%;
+   height: fit-content;
    margin-bottom: 0px; 
 }
 picture>img{
     border-right-width: medium;
     border-style: solid;
     border-color: black;
-    height: auto;
+    height: fit-content;
     margin-bottom: 0px;
 }
 .belowbarpar{
     float: left;
-    max-width: 50%;
-    height: 100%;
+    width: 50%;
+    height: fit-content;
     text-align:center;
       
 
