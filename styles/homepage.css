@@ -79,14 +79,14 @@ height:fit-content;
 }
 .belowbarimage{
     float: right;
-    width: 50%;
+    width: fit-content;
    height: fit-content;
     
 }
 .belowbarpar{
     float: left;
     font-size:large;
-    width: 50%;
+    width: fit-content;
     height: fit-content;
 
 }
