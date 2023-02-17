@@ -68,7 +68,7 @@ height:fit-content;
 
 #belowbar{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .belowbarimage{
     float: right;
