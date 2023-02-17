@@ -82,6 +82,8 @@ height:fit-content;
     float: right;
     width: 50%;
     height: auto;
+    position: relative;
+    top: 10px;
 }
 .belowbarpar{
     float: left;
