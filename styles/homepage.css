@@ -14,7 +14,12 @@ body{
     font-family: "csrocky",'Times New Roman';
     width: 100%;
     }
-    
+#bannerbar{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: fit-content;
+}
 header{
     text-align: center;
     align-items: center;
@@ -68,13 +73,16 @@ height:fit-content;
 
 #belowbar{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height:fit-content;
 }
 .belowbarimage{
     float: right;
+    width: 50%;
+    height: auto;
 }
 .belowbarpar{
     float: left;
+    width: 50%
 }
