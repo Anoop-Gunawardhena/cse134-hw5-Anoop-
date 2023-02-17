@@ -98,11 +98,9 @@ z-index: 999
     float: right;
     width: 50%;
    height: fit-content;
-   z-index:1
-   
-    
+   margin-bottom: 0px; 
 }
-img{
+picture>img{
     border-right-width: medium;
     border-style: solid;
     border-color: black;
