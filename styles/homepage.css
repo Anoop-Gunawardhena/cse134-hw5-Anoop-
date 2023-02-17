@@ -33,9 +33,9 @@ border-width: thick;
 background-color: lightgray;
 position: fixed;
 left: 0;
+top: 10px;
 right: 0;
 top:auto
-width: 100%
 }
 #navlist{
     display: flex;
