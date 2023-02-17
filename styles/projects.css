@@ -81,9 +81,13 @@ z-index: 999
 #roosevelttings{
     text-align: center;
     align-items: center;
+    font-family: 'Montserrat','Monospace';
+    font-size: 1.5rem;
+    width: 100%;
+    color:antiquewhite
 }
 #rooseface{
-    height: 30px;
-    width: 30px;
+    height: 100px;
+    width: 100px;
     border-radius: 30%;
 }
