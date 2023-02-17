@@ -68,4 +68,11 @@ height:fit-content;
 
 #belowbar{
     display: flex;
+    flex-direction: row;
+}
+.belowbarimage{
+    float: right;
+}
+.belowbarpar{
+    float: left;
 }
