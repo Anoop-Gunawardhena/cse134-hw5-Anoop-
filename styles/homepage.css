@@ -77,6 +77,8 @@ height:fit-content;
     flex-direction: row;
     width: 100%;
     height:fit-content;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .belowbarimage{
     float: right;
