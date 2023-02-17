@@ -103,7 +103,9 @@ z-index: 999
 picture>img{
     border-right-width: medium;
     border-style: solid;
-    border-color: black;s
+    border-color: black;
+    width:100%;
+    height:auto;
 }
 .belowbarpar{
     float: left;
