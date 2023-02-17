@@ -67,8 +67,8 @@ height:fit-content;
 }
 #sandiego{
     background-image: url("../images/boss.jpg");
-    height: 500px;
-    width: 500px;
+    height: 70%;
+    width: 100%;
 }
 #belowbar{
     display: flex;
