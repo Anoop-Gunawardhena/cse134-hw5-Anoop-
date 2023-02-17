@@ -83,11 +83,12 @@ height:fit-content;
 .belowbarimage{
     float: right;
     width: 50%;
-    height: 100%;
+   height: min-content;
     
 }
 .belowbarpar{
     float: left;
+    font-size: 4em;
     width: 50%;
 
 }
