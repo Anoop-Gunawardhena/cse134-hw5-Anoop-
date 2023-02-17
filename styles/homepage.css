@@ -77,16 +77,17 @@ height:fit-content;
     flex-direction: row;
     width: 100%;
     height:fit-content;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .belowbarimage{
-    float: right;
-    width: fit-content;
-   height: fit-content;
+
+width: fit-content;
+height: fit-content;
     
 }
 .belowbarpar{
-    float: left;
-    font-size:large;
+    font-size: larger;
     width: fit-content;
     height: fit-content;
 
