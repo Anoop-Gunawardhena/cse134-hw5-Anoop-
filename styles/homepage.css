@@ -6,6 +6,15 @@
 @counter-style{
     fallback: 
 }
+
+body{
+    background-color: darksalmon;
+    display: flex;
+    flex-direction: column;
+    font-family: "csrocky",'Times New Roman';
+    width: 100%;
+    }
+    
 header{
     text-align: center;
     align-items: center;
@@ -19,21 +28,13 @@ header{
     border-width: thin;
     width: 100%;
 }
-body{
-background-color: darksalmon;
-display: flex;
-gap: 30px;
-flex-direction: column;
-font-family: "csrocky",'Times New Roman';
-width: 100%;
-}
 
 nav{
 border-style: groove;
 border-width: thick;
 background-color: lightgray;
 position: fixed;
-top: 40px;
+top: 15px;
 left: 0px;
 right: 0px;
 
@@ -65,6 +66,6 @@ right: 0px;
 }
 
 #belowbar{
-    position: relative;;
+    position: static;
 }
 
