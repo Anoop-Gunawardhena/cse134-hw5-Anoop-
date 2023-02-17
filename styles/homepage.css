@@ -65,7 +65,10 @@ height:fit-content;
     border-right: thick;
     border-color: black;
 }
-
+#sandiego{
+    background-image: url("//images/boss.jpg");
+    height: fit-content;
+}
 #belowbar{
     display: flex;
     top: 40px;
