@@ -92,10 +92,9 @@ height:fit-content;
     float: right;
     width: 50%;
    height: fit-content;
-   border-radius: 2px;
+   border-right-width: medium;
    border-style: solid;
    border-color: black;
-   border-width: medium;
     
 }
 .belowbarpar{
