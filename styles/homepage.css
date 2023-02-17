@@ -101,11 +101,12 @@ height:fit-content;
     float: left;
     width: 50%;
     height: fit-content;
-    justify-content: center;
-    align-items: center;
+    
 
 }
 p{
     font-family: 'Montserrat';
     font-size: 2rem;
+    justify-content: center;
+    align-items: center;
 }
