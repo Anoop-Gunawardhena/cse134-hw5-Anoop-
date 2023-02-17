@@ -103,7 +103,7 @@ height:fit-content;
     height: fit-content;
     text-align:center;
     position: relative;
-    top: 30%;   
+    top: 10%;   
 
 }
 p{
@@ -111,6 +111,8 @@ p{
     font-size: 2rem;
     text-align: center;
     text-justify: auto;
+    position: relative;
+    top: 20%;
 }
 
 main{
