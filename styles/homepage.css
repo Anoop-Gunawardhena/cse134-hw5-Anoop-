@@ -9,7 +9,8 @@
 header{
     text-align: center;
     align-items: center;
-    position: fixed;
+    position: relative;
+    display: block;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -22,7 +23,6 @@ body{
 background-color: darksalmon;
 display: flex;
 flex-direction: column;
-gap: 10px;
 font-family: "csrocky",'Times New Roman';
 width: 100%;
 }
@@ -31,6 +31,7 @@ nav{
 border-style: groove;
 border-width: thick;
 background-color: lightgray;
+display: block;
 position: fixed;
 left: 0px;
 right: 0px;
