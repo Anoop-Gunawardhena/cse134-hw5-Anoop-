@@ -11,6 +11,7 @@ body{
     background-color: darksalmon;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     gap: 10%;
     font-family: "csrocky",'Times New Roman';
     width: 100%;
