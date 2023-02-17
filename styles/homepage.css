@@ -98,7 +98,7 @@ z-index: 999
 .belowbarimage{
     float: right;
     width: 50%;
-    height: 100%;
+    height: fit-content;
    margin-bottom: 0px; 
 }
 picture>img{
@@ -106,7 +106,7 @@ picture>img{
     border-style: solid;
     border-color: black;
     width:100%;
-    height: auto;
+    min-height: 100%;
 }
 .belowbarpar{
     float: left;
