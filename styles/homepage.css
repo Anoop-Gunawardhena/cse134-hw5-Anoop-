@@ -42,6 +42,7 @@ header{
     border-style: solid;
     border-width: thin;
     width: 100%;
+    z-index: 999
 }
 
 nav{
@@ -53,6 +54,7 @@ top: 20px;
 left: 0px;
 right: 0px;
 height:fit-content;
+z-index: 999
 }
 #navlist{
     display: flex;
@@ -96,6 +98,7 @@ height:fit-content;
     float: right;
     width: 50%;
    height: fit-content;
+   z-index:1
    
     
 }
