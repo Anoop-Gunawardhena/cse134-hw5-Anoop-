@@ -101,6 +101,8 @@ z-index: 999
 #roosevelt{
     text-shadow: 2px 2px 4px whitesmoke;
     text-decoration: wavy;
+    animation: 3s infinite alternate slidein;
+
 }
 .grow { 
     transition: all .2s ease-in-out; 
