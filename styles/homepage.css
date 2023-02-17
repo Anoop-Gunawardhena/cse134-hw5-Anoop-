@@ -31,7 +31,9 @@ nav{
 border-style: groove;
 border-width: thick;
 background-color: lightgray;
-nav-left: 0;
+position: fixed;
+left: 0;
+right: 0;
 width: 100%
 }
 #navlist{
