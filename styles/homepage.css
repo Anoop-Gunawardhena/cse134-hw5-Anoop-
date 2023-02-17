@@ -93,27 +93,26 @@ z-index: 999
     border-color: black;
     padding: 0px;
     z-index: 990;
+    overflow: scroll;
 }
 .belowbarimage{
     float: right;
-    max-width: 50%;
-   height: fit-content;
+    width: 50%;
+    height: 100%;
    margin-bottom: 0px; 
 }
 picture>img{
     border-right-width: medium;
     border-style: solid;
     border-color: black;
+    width:100%;
     height: auto;
-    max-width:50%;
-    margin-bottom: 0px;
 }
 .belowbarpar{
     float: left;
     width: 50%;
     height: fit-content;
     text-align:center;
-      
 
 }
 p{
