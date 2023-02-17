@@ -22,6 +22,7 @@ body{
 background-color: darksalmon;
 display: flex;
 flex-direction: column;
+gap: 10px;
 font-family: "csrocky",'Times New Roman';
 width: 100%;
 }
@@ -31,7 +32,6 @@ border-style: groove;
 border-width: thick;
 background-color: lightgray;
 position: fixed;
-top: 10px;
 left: 0px;
 right: 0px;
 
