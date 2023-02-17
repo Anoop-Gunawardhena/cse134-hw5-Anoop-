@@ -21,6 +21,8 @@ header{
     display: block;
     position: fixed;
     top: 0px;
+    left: 0px;
+    right: 0px;
     height:20px;
     background: dimgray;
     border-style: solid;
