@@ -13,6 +13,7 @@ body{
     flex-direction: column;
     font-family: "csrocky",'Times New Roman';
     width: 100%;
+
     }
     
 header{
@@ -35,7 +36,7 @@ border-style: groove;
 border-width: thick;
 background-color: lightgray;
 position: fixed;
-top: 15px;
+top: 115px;
 left: 0px;
 right: 0px;
 }
