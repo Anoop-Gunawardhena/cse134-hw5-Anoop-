@@ -22,6 +22,7 @@ header{
 body{
 background-color: darksalmon;
 display: flex;
+gap: 30px;
 flex-direction: column;
 font-family: "csrocky",'Times New Roman';
 width: 100%;
