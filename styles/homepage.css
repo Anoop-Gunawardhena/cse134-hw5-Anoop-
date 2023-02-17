@@ -98,14 +98,14 @@ z-index: 999
 .belowbarimage{
     float: right;
     width: 50%;
-   height: fit-content;
+    max-height: 100%;
    margin-bottom: 0px; 
 }
 picture>img{
     border-right-width: medium;
     border-style: solid;
     border-color: black;
-    height: fit-content;
+    height: auto;
     margin-bottom: 0px;
 }
 .belowbarpar{
