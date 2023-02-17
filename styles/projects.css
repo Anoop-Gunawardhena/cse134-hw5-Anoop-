@@ -78,3 +78,12 @@ z-index: 999
     border-right: thick;
     border-color: black;
 }
+#roosevelttings{
+    text-align: center;
+    align-items: center;
+}
+#rooseface{
+    height: 30px;
+    width: 30px;
+    border-radius: 30%;
+}
