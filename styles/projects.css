@@ -90,6 +90,7 @@ z-index: 999
     font-size: 1.7rem;
     color:antiquewhite;
     padding: 10px;
+    overflow: hidden;
 }
 #rooseface{
     height: 100px;
@@ -101,7 +102,8 @@ z-index: 999
 #roosevelt{
     text-shadow: 2px 2px 4px whitesmoke;
     text-decoration: wavy;
-    animation: 3s infinite alternate slidein;
+    animation-duration: 3s;
+    animation-name: slidein;
 
 }
 .grow { 
@@ -111,3 +113,14 @@ z-index: 999
 .grow:hover { 
 transform: scale(1.1); 
 }
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
