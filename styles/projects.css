@@ -124,3 +124,6 @@ transform: scale(1.1);
       width: 100%;
     }
   }
+  #description{
+    font-family: monospace;
+  }
