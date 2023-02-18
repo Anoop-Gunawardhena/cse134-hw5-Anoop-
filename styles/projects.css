@@ -111,7 +111,7 @@ z-index: 999
     animation-name: slidein;
 
 }
-#description{
+.description{
     font-family: monospace;
   }
   .solid{
