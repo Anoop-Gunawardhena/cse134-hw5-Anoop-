@@ -75,6 +75,7 @@ z-index: 999
 }
 #inbetweener{
     width: 30%;
+    border-left: thick;
     border-right: thick;
     border-color: black;
 }
