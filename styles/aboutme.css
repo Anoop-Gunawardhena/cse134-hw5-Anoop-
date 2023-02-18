@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     font-family: "csrocky",'Times New Roman';
     width: 100%;
-    margin:0;
+    margin:1px;
     }
 #bannerbar{
     display: flex;
@@ -80,7 +80,7 @@ z-index: 999
 }
 #postbanner{
     position: relative;
-    top:170px;
+    top:150px;
 }
 img{
     margin-left: 5px;
@@ -88,8 +88,6 @@ img{
     border-width: thin;
     border-color: white;
     animation: skew 3s;
-    opacity: 0.6;
-
 }
 @keyframes skew {
     0% {
@@ -98,5 +96,12 @@ img{
     100% {
       transform: skewX(-20deg);
     }
+  }
+
+  #agecage{
+    background-color: black;
+    width : 20px;
+    height : 20px;
+    transition: width 4s;
   }
   
