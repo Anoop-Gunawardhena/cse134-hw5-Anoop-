@@ -98,13 +98,3 @@ img{
     }
   }
 
-  #agecage{
-    background-color: black;
-    width : 20px;
-    height : 20px;
-    position: relative;
-    right: 0px;
-    transition: right 100s;
-    transition-timing-function: ease;
-  }
-  
