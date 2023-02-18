@@ -126,3 +126,10 @@ main{
     position: relative;
     top: 25%;
 }
+.grow { 
+    transition: all .2s ease-in-out; 
+    }
+    
+.grow:hover { 
+transform: scale(1.1); 
+}
