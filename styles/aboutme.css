@@ -78,3 +78,7 @@ z-index: 999
     border-right: thick;
     border-color: black;
 }
+img{
+    position: relative;
+    top:50px;
+}
