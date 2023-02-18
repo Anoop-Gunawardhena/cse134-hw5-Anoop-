@@ -78,7 +78,7 @@ z-index: 999
     border-right: thick;
     border-color: black;
 }
-img{
+#postbanner{
     position: relative;
-    top:150px;
+    top:200px;
 }
