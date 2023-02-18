@@ -71,10 +71,16 @@ z-index: 999
     width: 30%;
     height: 100%;
 }
-#inbetweener{
+#inbetweener1{
     width: 30%;
-    border-left: thick;
     border-right: thick;
+    border-left: thick;
+    border-color: black;
+}
+#inbetweener2{
+    width: 30%;
+    border-right: thick;
+    border-left: thick;
     border-color: black;
 }
 #roosevelttings{
