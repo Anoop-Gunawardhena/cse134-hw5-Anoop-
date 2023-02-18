@@ -80,5 +80,23 @@ z-index: 999
 }
 #postbanner{
     position: relative;
-    top:200px;
+    top:170px;
 }
+img{
+    margin-left: 5px;
+    border-style: groove;
+    border-width: thin;
+    border-color: white;
+    animation: skew 3s;
+    opacity: 0.6;
+
+}
+@keyframes skew {
+    0% {
+      transform: skewX(20deg);
+    }
+    100% {
+      transform: skewX(-20deg);
+    }
+  }
+  
