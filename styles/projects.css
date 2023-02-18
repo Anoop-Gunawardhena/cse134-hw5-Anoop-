@@ -138,8 +138,10 @@ table,th,td{
 }
 th{
     background-color: blue;
+    z-index: 1;
 }
 td{
     background-color: white;
+    z-index: 1;
 }
 
