@@ -63,6 +63,7 @@
             list-style-position:inside;
             width: 100%;
             position: relative;
+            margin: 0px;
             left: 0px;
             /*height: 100%;*/
         }
