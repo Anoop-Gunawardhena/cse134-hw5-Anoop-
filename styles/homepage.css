@@ -90,24 +90,22 @@
             border-color: black;
             padding: 0px;
             z-index: 990;
-            overflow-y: auto;
         }
         .belowbarimage{
-            float: right;
-            min-width: 50%;
-           min-height: 100%;
+           width: 50%;
+           height: auto
         }
         picture>img{
             border-right-width: medium;
             border-style: solid;
             border-color: black;
-            min-height: 100%;
+            height: auto;
             min-width: 100%;
           
         }
         .belowbarpar{
             float: left;
-            min-width:50%;
+            width:50%;
             min-height: 100%;
             text-align:center;
             
@@ -115,7 +113,6 @@
         }
         p{
             font-family: 'Montserrat','Monospace';
-            font-size: 2rem;
             text-align: center;
             text-justify: auto;
             position: relative;
@@ -241,7 +238,7 @@
     }
     .belowbarimage{
         float: right;
-        min-width: 50%;
+        width: 50%;
         height: 100%
     }
     picture>img{
@@ -253,15 +250,13 @@
     }
     .belowbarpar{
         float: left;
-        min-width: 50%;
+        width: 50%;
         height: 100%;
         text-align:center;
-        
-
+    
     }
     p{
         font-family: 'Montserrat','Monospace';
-        font-size: 2rem;
         text-align: center;
         text-justify: auto;
         position: relative;
