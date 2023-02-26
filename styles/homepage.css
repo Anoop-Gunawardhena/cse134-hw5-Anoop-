@@ -93,7 +93,8 @@
             z-index: 990;
         }
         .belowbarimage{
-            flex: 1;
+            float: left;
+            flex: 1 1 0;
            /* width: 50%;
            height: 100%; */
         }
@@ -106,9 +107,10 @@
           
         }
         .belowbarpar{
-            /* width:50%;
-            height: 100%; */
-            flex: 1;
+             width:50%;
+            /*height: 100%; */
+            float: right;
+            flex: 1 1 0;
             text-align:center;
             padding-left: 5px;
             padding-right: 5px;
@@ -242,9 +244,10 @@
         overflow: scroll;
     }
     .belowbarimage{
-        flex: 1;
-        /* width: 50%;
-        height: 100% */
+        flex: 1 1 0;
+        float: left;
+         width: 50%;
+        /*height: 100% */
     }
     picture>img{
         border-right-width: medium;
@@ -254,9 +257,10 @@
         width: fit-content;
     }
     .belowbarpar{
-        /* width: 50%;
-        height: 100%; */
-        flex: 1;
+        width: 50%;
+        /*height: 100%; */
+        flex: 1 1 0;
+        float: right;
         padding-left: 5px;
         padding-right: 5px;
         text-align:center;
