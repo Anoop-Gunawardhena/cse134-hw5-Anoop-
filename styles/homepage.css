@@ -84,7 +84,6 @@
             display: flex;
             flex-direction: row;
             width: 100%;
-            height:auto;
             background-color: antiquewhite;
             border-style: solid;
             border-width: medium;
@@ -95,7 +94,7 @@
         }
         .belowbarimage{
             float: right;
-            max-width: 50%;
+            width: 50%;
            height: 100%;
         }
         picture>img{
@@ -103,7 +102,7 @@
             border-style: solid;
             border-color: black;
             min-height: 100%;
-            max-width: 100%;
+            width: 100%;
           
         }
         .belowbarpar{
@@ -231,7 +230,6 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        height:auto;
         background-color: antiquewhite;
         border-style: solid;
         border-width: medium;
@@ -250,12 +248,12 @@
         border-style: solid;
         border-color: black;
         min-height: 100%;
-        max-width: 100%;
+        width: 100%;
     }
     .belowbarpar{
         float: left;
         width: 50%;
-        height: fit-content;
+        min-height: 50%;
         text-align:center;
         
 
