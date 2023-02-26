@@ -103,7 +103,7 @@
             border-style: solid;
             border-color: black;
             min-height: 100%;
-            max-width: 50%;
+            max-width: 100%;
           
         }
         .belowbarpar{
@@ -250,7 +250,7 @@
         border-style: solid;
         border-color: black;
         min-height: 100%;
-        max-width: 50%;
+        max-width: 100%;
     }
     .belowbarpar{
         float: left;
