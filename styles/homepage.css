@@ -94,7 +94,6 @@
         }
         .belowbarimage{
             float: left;
-            flex: 1 1 50%;
             max-width: 50%;
            height: 100%; 
         }
@@ -103,14 +102,13 @@
             border-style: solid;
             border-color: black;
             height: 100%;
-            width: max-content;
+            width: max-100;
           
         }
         .belowbarpar{
             width:50%;
             height: 100%; 
             float: right;
-            flex: 1 1 50%;
             text-align:center;
             padding-left: 5px;
             padding-right: 5px;
