@@ -102,8 +102,8 @@
             border-right-width: medium;
             border-style: solid;
             border-color: black;
-            min-height: 100%;
-            width: 50%;
+            height: 100%;
+            width: auto;
           
         }
         .belowbarpar{
@@ -245,7 +245,6 @@
         overflow: scroll;
     }
     .belowbarimage{
-        flex: 1 1 50%;
         float: left;
         width: 50%;    
         height: 100% 
@@ -254,14 +253,13 @@
         border-right-width: medium;
         border-style: solid;
         border-color: black;
-        min-height: 100%;
-        width:50%;
+        height:100%;
+        width: auto;
     }
     .belowbarpar{
         width: 50%;
         height: 100%;
         /*height: 100%; */
-        flex: 1 1 50%;
         float: right;
         padding-left: 5px;
         padding-right: 5px;
