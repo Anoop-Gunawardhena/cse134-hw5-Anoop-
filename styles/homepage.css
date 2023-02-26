@@ -84,7 +84,7 @@
             display: flex;
             flex-direction: row;
             width: 100%;
-            height:fit-content;
+            height:auto;
             background-color: antiquewhite;
             border-style: solid;
             border-width: medium;
@@ -228,7 +228,7 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        height:fit-content;
+        height:auto;
         background-color: antiquewhite;
         border-style: solid;
         border-width: medium;
@@ -240,7 +240,7 @@
     .belowbarimage{
         float: right;
         width: 50%;
-    height: fit-content;
+    height: 100%;
     }
     picture>img{
         border-right-width: medium;
