@@ -95,15 +95,15 @@
         .belowbarimage{
             float: left;
             flex: 1 1 0;
-           /* width: 50%;
-           height: 100%; */
+           width: 50%;
+           /*height: 100%; */
         }
         picture>img{
             border-right-width: medium;
             border-style: solid;
             border-color: black;
-            height: auto;
-            max-width: 100%;
+            min-height: 100%;
+            min-width: 100%;
           
         }
         .belowbarpar{
@@ -254,7 +254,7 @@
         border-style: solid;
         border-color: black;
         min-height: 100%;
-        width: fit-content;
+        min-width:100;
     }
     .belowbarpar{
         width: 50%;
