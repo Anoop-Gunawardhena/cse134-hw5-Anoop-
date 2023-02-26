@@ -15,7 +15,7 @@
         flex-direction: column;
         font-family: "csrocky",'Times New Roman';
         width: 100%;
-        font-size: 10px;
+        font-size: 5px;
         margin:0;
         overflow-y: auto;
         }
@@ -245,8 +245,7 @@
     }
     .belowbarimage{
         flex: 1 1 50%;
-        float: left;
-        width: 50%;
+        float: left;    
         height: 100% 
     }
     picture>img{
