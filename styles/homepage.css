@@ -83,7 +83,6 @@
         #belowbar{
             display: flex;
             flex-direction: row;
-            position: fixed;
             width: 100%;
             height: auto;
             background-color: antiquewhite;
@@ -94,8 +93,9 @@
             z-index: 990;
         }
         .belowbarimage{
-           width: 50%;
-           height: 100%;
+            flex: 1;
+           /* width: 50%;
+           height: 100%; */
         }
         picture>img{
             border-right-width: medium;
@@ -106,8 +106,9 @@
           
         }
         .belowbarpar{
-            width:50%;
-            height: 100%;
+            /* width:50%;
+            height: 100%; */
+            flex: 1;
             text-align:center;
             padding-left: 5px;
             padding-right: 5px;
@@ -239,12 +240,11 @@
         padding: 0px;
         z-index: 990;
         overflow: scroll;
-        position: fixed;
     }
     .belowbarimage{
-        float: right;
-        width: 50%;
-        height: 100%
+        flex: 1;
+        /* width: 50%;
+        height: 100% */
     }
     picture>img{
         border-right-width: medium;
@@ -254,8 +254,9 @@
         min-width: 100%;
     }
     .belowbarpar{
-        width: 50%;
-        height: 100%;
+        /* width: 50%;
+        height: 100%; */
+        flex: 1;
         padding-left: 5px;
         padding-right: 5px;
         text-align:center;
