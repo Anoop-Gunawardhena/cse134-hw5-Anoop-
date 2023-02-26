@@ -15,7 +15,7 @@
         flex-direction: column;
         font-family: "csrocky",'Times New Roman';
         width: 100%;
-        font-size: 16px;
+        font-size: 10px;
         margin:0;
         overflow-y: auto;
         }
@@ -95,7 +95,8 @@
         }
         .belowbarimage{
             float: right;
-           width: 50%;
+           max-width: 50%;
+           height: 100%;
         }
         picture>img{
             border-right-width: medium;
@@ -107,7 +108,7 @@
         }
         .belowbarpar{
             float: left;
-            width:50%;
+            max-width:50%;
             min-height: 100%;
             text-align:center;
             overflow-wrap: break-word;
