@@ -96,7 +96,7 @@
         .belowbarimage{
             float: right;
             width: 50%;
-        height: fit-content;
+        height: 100%;
         }
         picture>img{
             border-right-width: medium;
