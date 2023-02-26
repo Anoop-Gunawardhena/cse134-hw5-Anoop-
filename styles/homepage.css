@@ -94,8 +94,8 @@
         }
         .belowbarimage{
             float: left;
-            flex: 1 1 0;
-           width: 50%;
+            flex: 1 1 50%;
+            width: 50%;
            height: 100%; 
         }
         picture>img{
@@ -107,10 +107,10 @@
           
         }
         .belowbarpar{
-             width:50%;
+            width:50%;
             height: 100%; 
             float: right;
-            flex: 1 1 0;
+            flex: 1 1 50%;
             text-align:center;
             padding-left: 5px;
             padding-right: 5px;
@@ -244,7 +244,7 @@
         overflow: scroll;
     }
     .belowbarimage{
-        flex: 1 1 0;
+        flex: 1 1 50%;
         float: left;
         width: 50%;
         height: 100% 
@@ -260,7 +260,7 @@
         width: 50%;
         height: 100%;
         /*height: 100%; */
-        flex: 1 1 0;
+        flex: 1 1 50%;
         float: right;
         padding-left: 5px;
         padding-right: 5px;
