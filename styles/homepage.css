@@ -7,7 +7,27 @@
     font-family: "Montserrat";
     src: url("../fonts/Other/Montserrat-VariableFont_wght.ttf");
 }
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: cornflowerblue;
+        display: flex;
+        flex-direction: column;
+        font-family: "csrocky",'Times New Roman';
+        width: 100%;
+        margin:0;
+        }
 
+        /* #bannerbar{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            height: fit-content;
+            position: fixed;
+            z-index: 999;
+        } */
+
+    
+}
 
 body{
     background-color: darksalmon;
