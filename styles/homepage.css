@@ -102,7 +102,7 @@
             border-style: solid;
             border-color: black;
             height: auto;
-            min-width: 100%;
+            width: fit-content;
           
         }
         .belowbarpar{
@@ -251,7 +251,7 @@
         border-style: solid;
         border-color: black;
         min-height: 100%;
-        min-width: 100%;
+        width: fit-content;
     }
     .belowbarpar{
         /* width: 50%;
