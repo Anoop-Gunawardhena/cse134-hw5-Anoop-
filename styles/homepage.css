@@ -7,7 +7,7 @@
     font-family: "Montserrat";
     src: url("../fonts/Other/Montserrat-VariableFont_wght.ttf");
 }
-@media screen and (max-width: 600px) and (min-width: 400px){
+@media screen and (max-width:600px) and (min-width:400px){
 
     body{
         background-color: cornflowerblue;
@@ -17,6 +17,7 @@
         width: 100%;
         margin:0;
         font-size: 16px;
+        overflow-y: auto;
         }
         #bannerbar{
             display: flex;
@@ -55,7 +56,7 @@
         }
         #navlist{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around; 
             font-size: 0.6em;
             list-style-position:inside;
@@ -70,20 +71,11 @@
             text-align: center;
             align-items: center;
             font-style: italic;
-            width: 30%;
-            height: 100%;
-        }
-        #inbetweener1{
-            width: 30%;
-            border-right: thick;
-            border-left: thick;
+            width: 100%;
+            border-style: solid;
             border-color: black;
-        }
-        #inbetweener2{
-            width: 30%;
-            border-right: thick;
-            border-left: thick;
-            border-color: black;
+            border-width: medium;
+            height: 33%;
         }
     
         #belowbar{
@@ -152,7 +144,7 @@
 
     
 }
-@media  screen and (min-width: 600px) {
+@media  screen and (min-width:700px) {
     body{
         background-color: darksalmon;
         display: flex;
