@@ -94,8 +94,7 @@
             z-index: 990;
         }
         .belowbarimage{
-            float: right;
-           max-width: 50%;
+           width: 50%;
            height: 100%;
         }
         picture>img{
@@ -107,11 +106,13 @@
           
         }
         .belowbarpar{
-            float: left;
-            max-width:50%;
-            min-height: 100%;
+            width:50%;
+            height: 100%;
             text-align:center;
+            padding-left: 5px;
+            padding-right: 5px;
             overflow-wrap: break-word;
+
     
         }
         p{
@@ -253,10 +254,13 @@
         min-width: 100%;
     }
     .belowbarpar{
-        float: left;
         width: 50%;
         height: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
         text-align:center;
+        overflow-wrap: break-word;
+
     
     }
     p{
