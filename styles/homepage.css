@@ -95,7 +95,7 @@
         .belowbarimage{
             float: left;
             flex: 1 1 50%;
-            width: 50%;
+            max-width: 50%;
            height: 100%; 
         }
         picture>img{
@@ -103,7 +103,7 @@
             border-style: solid;
             border-color: black;
             height: 100%;
-            width: fit-content;
+            width: max-content;
           
         }
         .belowbarpar{
@@ -246,7 +246,7 @@
     }
     .belowbarimage{
         float: left;
-        width: 50%;    
+        max-width: 50%;    
         height: 100% 
     }
     picture>img{
@@ -254,7 +254,7 @@
         border-style: solid;
         border-color: black;
         height:100%;
-        width: fit-content;
+        width: max-content;
     }
     .belowbarpar{
         width: 50%;
