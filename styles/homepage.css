@@ -96,14 +96,14 @@
             float: left;
             width: 50%;
            height: 100%; 
+           overflow-x: hidden;
         }
         picture>img{
             border-right-width: medium;
             border-style: solid;
             border-color: black;
             height: auto;
-            width:50%;
-            /* min-width: 100%; */
+            min-width: 100%; 
           
         }
         .belowbarpar{
@@ -246,15 +246,16 @@
     .belowbarimage{
         float: left;
         width: 50%;    
-        height: 100% 
+        height: 100%
+        overflow:fit-content;
     }
     picture>img{
         border-right-width: medium;
         border-style: solid;
         border-color: black;
         height:auto;
-        width: 50%;
-        max-height: 100%;
+        width: 100%;
+        min-height: 100%;
     }
     .belowbarpar{
         width: 50%;
