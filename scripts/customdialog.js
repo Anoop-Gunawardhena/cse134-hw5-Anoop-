@@ -7,6 +7,7 @@ export const sfpromptbtn = document.getElementById("SafePrompt");
 export const textout = document.getElementById("textout");
 export let altdialogbtn;
 export let confirmation;
+export let entered;
 
 
 
@@ -16,14 +17,14 @@ export let confirmation;
         console.log("output exists")
         textout.innerHTML ='';
     }
-    check = document.getElementById("alertbox");
+    let check = document.getElementById("alertbox");
     if(check != null){
         console.log("alert message already there")
         document.removeChild(check);
     }
 
-     boxclone = boxtemplate.content.cloneNode(true)   
-     attempt =  boxclone.querySelector('dialog');
+     let boxclone = boxtemplate.content.cloneNode(true)   
+     let attempt =  boxclone.querySelector('dialog');
 
     //attempt.textContent = value > magicNumber ? `Less than ${value}` : `Bigger than ${value}`;
    // Elementsection.style.border = "4px solid black";
@@ -34,10 +35,10 @@ export let confirmation;
     Elementsection.appendChild(attempt);
     //dbox.style.backgroundColor ="yellow";
     setTimeout(function(){
-    dbox = document.getElementById('alertbox')
-    para = dbox.querySelector('p');
+    let dbox = document.getElementById('alertbox')
+    let para = dbox.querySelector('p');
     para.style.textAlign = "center";
-    altdialogbtn = document.getElementById("alertbtn");
+    let altdialogbtn = document.getElementById("alertbtn");
     altdialogbtn.style.position ="relative";
     altdialogbtn.style.width = "25%";
     altdialogbtn.style.textAlign = 'center';
@@ -45,8 +46,7 @@ export let confirmation;
     altdialogbtn.addEventListener("click",removeAlertbox);},0);
 }
 export function addcfmbox() {
-    check = document.getElementById("confirmbox");
-    textout = document.getElementById("textout");
+    let check = document.getElementById("confirmbox");
     if(textout != null){
         console.log("output exists")
         textout.innerHTML ='';
@@ -56,8 +56,8 @@ export function addcfmbox() {
         document.removeChild(check);
     }
 
-     boxclone = boxtemplate.content.cloneNode(true)   
-     attempt =  boxclone.querySelector('#confirmbox');
+    let boxclone = boxtemplate.content.cloneNode(true)   
+     let attempt =  boxclone.querySelector('#confirmbox');
 
     //attempt.textContent = value > magicNumber ? `Less than ${value}` : `Bigger than ${value}`;
    // Elementsection.style.border = "4px solid black";
@@ -68,10 +68,10 @@ export function addcfmbox() {
     Elementsection.appendChild(attempt);
     //dbox.style.backgroundColor ="yellow";
     setTimeout(function(){
-    dbox = document.getElementById('confirmbox')
-    para = dbox.querySelector('p');
+    let dbox = document.getElementById('confirmbox')
+    let para = dbox.querySelector('p');
     para.style.textAlign = "center";
-    cfmdialogbtns = dbox.getElementsByTagName('button');
+    let cfmdialogbtns = dbox.getElementsByTagName('button');
     cfmdialogbtns[0].style.position ="relative";
     cfmdialogbtns[0].style.width = "26%";
     cfmdialogbtns[0].style.textAlign = 'center';
@@ -91,8 +91,7 @@ export function addcfmbox() {
     },0);
 }
 export function addpromptbox(){
-    check = document.getElementById("promptbox");
-    textout = document.getElementById("textout");
+    let check = document.getElementById("promptbox");
     if(textout != null){
         console.log("output exists")
         textout.innerHTML ='';
@@ -102,8 +101,8 @@ export function addpromptbox(){
         document.removeChild(check);
     }
 
-     boxclone = boxtemplate.content.cloneNode(true)   
-     attempt =  boxclone.querySelector('#promptbox');
+    let boxclone = boxtemplate.content.cloneNode(true)   
+     let attempt =  boxclone.querySelector('#promptbox');
 
     //attempt.textContent = value > magicNumber ? `Less than ${value}` : `Bigger than ${value}`;
    // Elementsection.style.border = "4px solid black";
@@ -114,13 +113,13 @@ export function addpromptbox(){
     Elementsection.appendChild(attempt);
     //dbox.style.backgroundColor ="yellow";
     setTimeout(function(){
-    dbox = document.getElementById('promptbox')
-    para = dbox.querySelector('p');
+    let dbox = document.getElementById('promptbox')
+    let para = dbox.querySelector('p');
     para.style.textAlign = "center";
-    inp = dbox.querySelector('input')
+    let inp = dbox.querySelector('input')
     inp.style.width = '90%';
     inp.placeholder = "Type name here";
-    promptdialogbtns = dbox.getElementsByTagName('button');
+    let promptdialogbtns = dbox.getElementsByTagName('button');
     promptdialogbtns[0].style.position ="relative";
     promptdialogbtns[0].style.width = "26%";
     promptdialogbtns[0].style.textAlign = 'center';
@@ -139,12 +138,12 @@ export function addpromptbox(){
     })},0);
 }
 export function removecfmbox() {
-    box = document.getElementById('confirmbox');
+    let box = document.getElementById('confirmbox');
     if(box != null){
         box.remove();
     }
     //Elementsection.style.border = 'none';
-    outcage = document.getElementById('textout');
+    let outcage = document.getElementById('textout');
     if (confirmation == true){
         outcage.innerHTML = "value returned by the confirm method is true"
     }
@@ -155,9 +154,9 @@ export function removecfmbox() {
    
 }
 export function removepromptbox() {
-    outcage = document.getElementById('textout');
+    let outcage = document.getElementById('textout');
 
-    txtval = document.getElementById('promptinp')
+    let txtval = document.getElementById('promptinp')
 
     if(entered == true){
         outcage.innerHTML ="User's name is " + txtval.value;
@@ -166,7 +165,7 @@ export function removepromptbox() {
         outcage.innerHTML ="User did not enter anything";
 
     }
-    box = document.getElementById('promptbox');
+    let box = document.getElementById('promptbox');
     if(box != null){
         box.remove();
     }
@@ -175,6 +174,6 @@ export function removepromptbox() {
     Elementsection.removeChild(document.getElementById('alertbox'));
     Elementsection.style.border = 'none';
 }
-// altbtn.addEventListener("click",addAlertbox);
-// cfmbtn.addEventListener("click",addcfmbox);
-// promptbtn.addEventListener("click",addpromptbox)
+altbtn.addEventListener("click",addAlertbox);
+cfmbtn.addEventListener("click",addcfmbox);
+promptbtn.addEventListener("click",addpromptbox)
