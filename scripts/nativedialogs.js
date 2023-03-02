@@ -1,4 +1,3 @@
-import './customdialog.js';
 const alertbtn = document.getElementById("Alert");
 const confirmbtn = document.getElementById("Confirm");
 const promptbtn = document.getElementById("Prompt");
