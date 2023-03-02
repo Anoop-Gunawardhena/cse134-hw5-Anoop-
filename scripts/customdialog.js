@@ -1,16 +1,17 @@
-export const Elementsection = document.querySelector('#dialogs');
-export const boxtemplate = document.querySelector('template');
-export const altbtn = document.getElementById("Alert");
-export const cfmbtn = document.getElementById("Confirm");
-export const promptbtn = document.getElementById("Prompt");
-export const sfpromptbtn = document.getElementById("SafePrompt");
-export let altdialogbtn;
-export let confirmation;
+// export const Elementsection = document.querySelector('#dialogs');
+// export const boxtemplate = document.querySelector('template');
+// export const altbtn = document.getElementById("Alert");
+// export const cfmbtn = document.getElementById("Confirm");
+// export const promptbtn = document.getElementById("Prompt");
+// export const sfpromptbtn = document.getElementById("SafePrompt");
+// export const textout = document.getElementById("textout");
+// export let altdialogbtn;
+// export let confirmation;
 
-/*
 
- function addAlertbox() {
-    textout = document.getElementById("textout");
+
+ export function addAlertbox() {
+    
     if(textout != null){
         console.log("output exists")
         textout.innerHTML ='';
@@ -43,7 +44,7 @@ export let confirmation;
     altdialogbtn.style.left = '40%';   
     altdialogbtn.addEventListener("click",removeAlertbox);},0);
 }
-function addcfmbox() {
+export function addcfmbox() {
     check = document.getElementById("confirmbox");
     textout = document.getElementById("textout");
     if(textout != null){
@@ -89,7 +90,7 @@ function addcfmbox() {
     });
     },0);
 }
-function addpromptbox(){
+export function addpromptbox(){
     check = document.getElementById("promptbox");
     textout = document.getElementById("textout");
     if(textout != null){
@@ -137,7 +138,7 @@ function addpromptbox(){
         removepromptbox();
     })},0);
 }
-function removecfmbox() {
+export function removecfmbox() {
     box = document.getElementById('confirmbox');
     if(box != null){
         box.remove();
@@ -153,7 +154,7 @@ function removecfmbox() {
     //console.log(document.getElementById('confirmbox').nodeType)
    
 }
-function removepromptbox() {
+export function removepromptbox() {
     outcage = document.getElementById('textout');
 
     txtval = document.getElementById('promptinp')
@@ -170,11 +171,10 @@ function removepromptbox() {
         box.remove();
     }
 }
- function removeAlertbox() {
+ export function removeAlertbox() {
     Elementsection.removeChild(document.getElementById('alertbox'));
     Elementsection.style.border = 'none';
 }
-altbtn.addEventListener("click",addAlertbox);
-cfmbtn.addEventListener("click",addcfmbox);
-promptbtn.addEventListener("click",addpromptbox)
-*/
+// altbtn.addEventListener("click",addAlertbox);
+// cfmbtn.addEventListener("click",addcfmbox);
+// promptbtn.addEventListener("click",addpromptbox)
