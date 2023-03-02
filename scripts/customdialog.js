@@ -159,7 +159,7 @@ export function removepromptbox() {
     let txtval = document.getElementById('promptinp')
 
     if(entered == true){
-        outcage.innerHTML ="User's name is " + txtval.value;
+        outcage.innerHTML ="User's name is " + DOMPurify.sanitize(txtval.value);
     }
     else{
         outcage.innerHTML ="User did not enter anything";
