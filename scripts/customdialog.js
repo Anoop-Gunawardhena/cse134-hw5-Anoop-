@@ -1,12 +1,12 @@
-// export const Elementsection = document.querySelector('#dialogs');
-// export const boxtemplate = document.querySelector('template');
-// export const altbtn = document.getElementById("Alert");
-// export const cfmbtn = document.getElementById("Confirm");
-// export const promptbtn = document.getElementById("Prompt");
-// export const sfpromptbtn = document.getElementById("SafePrompt");
-// export const textout = document.getElementById("textout");
-// export let altdialogbtn;
-// export let confirmation;
+export const Elementsection = document.querySelector('#dialogs');
+export const boxtemplate = document.querySelector('template');
+export const altbtn = document.getElementById("Alert");
+export const cfmbtn = document.getElementById("Confirm");
+export const promptbtn = document.getElementById("Prompt");
+export const sfpromptbtn = document.getElementById("SafePrompt");
+export const textout = document.getElementById("textout");
+export let altdialogbtn;
+export let confirmation;
 
 
 
