@@ -34,7 +34,7 @@ function throwprompt() {
     }
     else{
         
-        opt.innerHTML = DOMPurify.sanitize(city);
+        opt.innerHTML = DOMPurify.sanitize("the user typed in " + city);
     }
 },0);
 }
