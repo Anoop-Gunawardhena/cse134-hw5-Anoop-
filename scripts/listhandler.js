@@ -15,6 +15,7 @@ export function addNewBlog () {
     let islist  = document.getElementById('bloglist');
     if(islist == null){
          let bloglist =document.createElement('ul');
+         bloglist.id = 'bloglist';
         listcontainer.appendChild(bloglist);
     }
     let bloglistitem = document.createElement('li');
