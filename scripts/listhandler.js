@@ -47,6 +47,30 @@ export function addNewBlog () {
     
 }
 
-export function editExistingBlog(){
+export function editExistingBlog(event){
+    let btn = event.target;
+    let btntid = btn.id;
+    btnid = btnid.substring(btnid.length -2,btnid.length-1);
+    let itemtoedit = document.getElementById(btnid);
+    let paratoedit = itemtoedit.querySelector('p');
+    let title = document.getElementById('blogtitle');
+    let date =  document.getElementById('blogdate');
+    let summary = document.getElementById('blogsummary');
+    let listcontainer = document.getElementById('listcontainer');
+    if(title.value == null || title.value == ''){
+        window.alert("please enter a title");
+        return;
+    }
+    if(summary.value == null || summary.value == ''){
+        window.alert("please enter a summary");
+        return;
+    }
+    if( date.value == 'dd/mm/yyyy'){
+        window.alert('please enter a data');
+    }
+    let dateval = date.value;
+    let lastfour = (dateval).substrng(dateval.length-5,dateval.length-1);
+    paratoedit.innerText= title.value + ' ( ' + lastfour + ' ) - ' + summary.value;
+
 
 }
