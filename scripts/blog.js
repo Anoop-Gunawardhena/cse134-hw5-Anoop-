@@ -18,7 +18,7 @@
 
     },0);
 }
-function startblogs(event){
+export function startblogs(event){
     let btn = event.target;
     let check = document.getElementById('subform');
     if(check != null){
