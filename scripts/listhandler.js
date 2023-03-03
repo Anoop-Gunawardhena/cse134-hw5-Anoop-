@@ -39,7 +39,7 @@ export function addNewBlog () {
     count = count + 1;
     bloglistitem.style.display = 'flex';
     bloglistitem.style.flexDirection = 'row';
-    titletext = title.value;
+    let titletext = title.value;
     titletext = titletext.bold();
     itemdesc.innerText= titletext + ' ( ' + lastfour + ' ) - ' + summary.value;  
     bloglistitem.append(itemdesc);
@@ -77,7 +77,7 @@ export function editExistingBlog(event){
     }
     let dateval = date.value;
     let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
-    titletext = title.value;
+    let titletext = title.value;
     titletext = titletext.bold();
     paratoedit.innerText= titletext + ' ( ' + lastfour + ' ) - ' + summary.value;
 
