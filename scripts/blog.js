@@ -3,7 +3,7 @@
     export let maincont = document.getElementById('listcontainer');
     let bodycont = document.getElementById('bodycontainer');
     let addbtn = document.getElementById('addbtn');
-    let formtemplate = document.querySelector('template');
+    let formtemplate = document.querySelector('#formtemplate');
     let cancelbtn;
     let savebtn;
     console.log(maincont.childElementCount);
@@ -25,7 +25,7 @@ function startblogs(){
     }
     // let currentgap = bodycont.style.gap
     // bodycont.style.flexDirection = 'column'
-    let formclone = formtemplate.content.cloneNode(true)
+    let formclone = formtemplate.content.cloneNode(true);
     let form =  formclone.querySelector('dialog');
     document.body.appendChild(form);
     form = document.getElementById('subform');
