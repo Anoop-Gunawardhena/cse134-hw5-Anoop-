@@ -1,4 +1,4 @@
-import {listcontainer} from '../scripts/blog.js'
+import {maincont} from '../scripts/blog.js'
 let count = 0;
 let bloglisttemp = document.getElementById('bloglisttemp')
 export function addNewBlog () {
@@ -16,7 +16,7 @@ export function addNewBlog () {
     }
     let listclone = bloglisttemp.content.cloneNode(true)
     let list =  listclone.querySelector('ul');
-    listcontainer.appendChild(list);
+    maincont.appendChild(list);
     let bloglistitem = document.createElement('li');
     list.appendChild(bloglistitem);
     let itemdesc = document.createElement('p');
