@@ -37,7 +37,7 @@ export function startblogs(event){
         let dbox = document.getElementById('subform');
         dbox.remove();
     });
-    if (btn.id == 'addbtn'){
+    if (btn.id != 'addbtn'){
         savebtn.id == btn.id;
         savebtn.addEventListener('click',editExistingBlog);
     }
