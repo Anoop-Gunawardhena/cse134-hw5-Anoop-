@@ -17,10 +17,10 @@
 }
 function startblogs(){
     let currentgap = bodycont.style.gap
-    bodycont.style.display.flexDirection = 'column'
+    maincont.style.display.flexDirection = 'column'
     let formclone = formtemplate.content.cloneNode(true)
     let form =  formclone.querySelector('form');
     maincont.append(form);
 
 }
-addbtn.addEventListener("click",startblogs);
+addbtn[0].addEventListener("click",startblogs);
