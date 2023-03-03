@@ -14,7 +14,7 @@ export function addNewBlog () {
     if(islist == null){
          let bloglist =document.createElement('ul');
     }
-    bloglistitem = document.createElement('li');
+    let bloglistitem = document.createElement('li');
     bloglistitem.class = 'listitems';
     bloglistitem.innerHTML = title.textContent;
     
