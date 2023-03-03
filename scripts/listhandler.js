@@ -2,11 +2,11 @@ export function addNewBlog () {
     let title = document.getElementById('blogtitle');
     let date =  document.getElementById('blogdate');
     let summary = document.getElementById('blogsummary');
-    if(title.innerHTML == null || title.innerHTML == ''){
+    if(title.value == null || title.value == ''){
         window.alert("please enter a title");
         return;
     }
-    if(summary.innerHTML == null || summary.innerHTML == ''){
+    if(summary.value == null || summary.value == ''){
         window.alert("please enter a summary");
         return;
     }
