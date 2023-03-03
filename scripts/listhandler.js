@@ -1,7 +1,9 @@
 import {maincont,startblogs} from '../scripts/blog.js'
 let count = 0;
 let bloglisttemp = document.getElementById('bloglisttemp')
+let form = document.querySelector('form');
 export function addNewBlog () {
+    form.remove();
     let title = document.getElementById('blogtitle');
     let date =  document.getElementById('blogdate');
     let summary = document.getElementById('blogsummary');
@@ -53,6 +55,7 @@ export function addNewBlog () {
 }
 
 export function editExistingBlog(event){
+    form.remove()
     let btn = event.target;
     console.log(btn);
     let btntid = btn.id;
