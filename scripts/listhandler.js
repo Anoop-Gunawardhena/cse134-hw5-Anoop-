@@ -54,6 +54,7 @@ export function addNewBlog () {
 
 export function editExistingBlog(event){
     let btn = event.target;
+    console.log(btn);
     let btntid = btn.id;
     btnid = parseInt(btnid);
     btnid = btnid.toString();
