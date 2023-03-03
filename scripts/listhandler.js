@@ -36,6 +36,8 @@ export function addNewBlog () {
     editbtn.id = 'editbtn'+ count.toString();
     removebtn.id = 'removebrn'+ count.toString();
     count = count + 1;
+    bloglistitem.style.display = 'flex';
+    bloglistitem.style.flexDirection = 'row';
     itemdesc.innerText= title.value + ' ( ' + lastfour + ' ) - ' + summary.value;  
     bloglistitem.append(itemdesc);
     bloglistitem.append(editbtn);
