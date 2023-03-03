@@ -33,7 +33,7 @@ function startblogs(){
     let cancelbtn = form.querySelector('#cancelbtn');
     let savebtn = form.querySelector('#savebtn');
     cancelbtn.addEventListener("click", function(){
-        dbox = document.getElementById('subform');
+        let dbox = document.getElementById('subform');
         dbox.remove();
     });
     savebtn.addEventListener("click",addNewBlog)
