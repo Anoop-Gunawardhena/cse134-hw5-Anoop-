@@ -19,7 +19,7 @@
     },0);
 }
 function startblogs(){
-    check = document.getElementById('subform');
+    let check = document.getElementById('subform');
     if(check != null){
         check.remove();
     }
@@ -30,8 +30,8 @@ function startblogs(){
     document.body.appendChild(form);
     form = document.getElementById('subform');
     form.style.border = '10px solid black';
-    cancelbtn = form.querySelector('#cancelbtn');
-    savebtn = form.querySelector('#savebtn');
+    let cancelbtn = form.querySelector('#cancelbtn');
+    let savebtn = form.querySelector('#savebtn');
     cancelbtn.addEventListener("click", function(){
         dbox = document.getElementById('subform');
         dbox.remove();
