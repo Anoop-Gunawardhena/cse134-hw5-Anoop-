@@ -1,5 +1,5 @@
 
-    import {addNewBlog,RemoveBlog} from '../scripts/listhandler.js'
+    import {addNewBlog,removeBlog} from '../scripts/listhandler.js'
     let maincont = document.getElementById('listcontainer');
     let bodycont = document.getElementById('bodycontainer');
     let addbtn = document.getElementById('addbtn');
