@@ -50,7 +50,7 @@ export function addNewBlog () {
 export function editExistingBlog(event){
     let btn = event.target;
     let btntid = btn.id;
-    btnid = btnid.substring(btnid.length -2,btnid.length-1);
+    btnid = parseInt(btnid);
     let itemtoedit = document.getElementById(btnid);
     let paratoedit = itemtoedit.querySelector('p');
     let title = document.getElementById('blogtitle');
