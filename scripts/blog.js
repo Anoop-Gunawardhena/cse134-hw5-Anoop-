@@ -3,7 +3,7 @@
     export let maincont = document.getElementById('listcontainer');
     let bodycont = document.getElementById('bodycontainer');
     let addbtn = document.getElementById('addbtn');
-    let formtemplate = document.body.querySelector('#formtemplate');
+    let formtemplate = document.getElementById('formtemp');
     let cancelbtn;
     let savebtn;
     console.log(maincont.childElementCount);
