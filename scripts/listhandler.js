@@ -51,6 +51,7 @@ export function editExistingBlog(event){
     let btn = event.target;
     let btntid = btn.id;
     btnid = parseInt(btnid);
+    btnid = btnid.toString();
     let itemtoedit = document.getElementById(btnid);
     let paratoedit = itemtoedit.querySelector('p');
     let title = document.getElementById('blogtitle');
