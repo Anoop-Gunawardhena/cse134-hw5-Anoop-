@@ -18,7 +18,7 @@ export function addNewBlog () {
         window.alert('please enter a data');
     }
     let dateval = date.value;
-    let lastfour = (dateval).substrng(dateval.length-5,dateval.length-1);
+    let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     let listclone = bloglisttemp.content.cloneNode(true)
     let list =  listclone.querySelector('ul');
     maincont.appendChild(list);
