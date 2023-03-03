@@ -39,6 +39,7 @@ export function startblogs(event){
     });
     if (btn.id != 'addbtn'){
         savebtn.id == btn.id;
+        console.log("id of button that called startblogs " + savebtn.id)
         savebtn.addEventListener('click',editExistingBlog);
     }
 
