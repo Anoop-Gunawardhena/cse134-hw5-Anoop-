@@ -34,7 +34,7 @@ export function addNewBlog () {
         bloglistitem.remove();
     })
     setTimeout(function (){
-        bloglist.appendChild(bloglistitem);
+        islist.appendChild(bloglistitem);
 },0);
 }
 
