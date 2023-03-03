@@ -1,6 +1,6 @@
 
     import {addNewBlog,removeBlog} from '../scripts/listhandler.js'
-    let maincont = document.getElementById('listcontainer');
+    export let maincont = document.getElementById('listcontainer');
     let bodycont = document.getElementById('bodycontainer');
     let addbtn = document.getElementById('addbtn');
     let formtemplate = document.querySelector('template');

@@ -1,4 +1,6 @@
+import {listcontainer} from '../scripts/blog.js'
 let count = 0;
+let bloglisttemp = document.getElementById('bloglisttemp')
 export function addNewBlog () {
     let title = document.getElementById('blogtitle');
     let date =  document.getElementById('blogdate');
@@ -12,13 +14,11 @@ export function addNewBlog () {
         window.alert("please enter a summary");
         return;
     }
-    let islist  = document.getElementById('bloglist');
-    if(islist == null){
-         let bloglist =document.createElement('ul');
-         bloglist.id = 'bloglist';
-        listcontainer.appendChild(bloglist);
-    }
+    let listclone = bloglisttemp.content.cloneNode(true)
+    let list =  listclone.querySelector('ul');
+    listcontainer.appendChild(list);
     let bloglistitem = document.createElement('li');
+    list.appendChild(bloglistitem);
     let itemdesc = document.createElement('p');
     let editbtn = document.createElement('button');
     editbtn.class = 'editbtn'
@@ -26,6 +26,8 @@ export function addNewBlog () {
     removebtn.class = 'removebtn'
     bloglistitem.class = 'listitems';
     bloglistitem.id = count.toString();
+    editbtn.id = 'editbtn'+ count.toString();
+    removebtn.id = 'removebrn'+ count.toString();
     count = count + 1;
     itemdesc.value = title.value + ' ( ' + date.value + ' ) - ' + summary.value;  
     bloglistitem.append(itemdesc);
@@ -34,9 +36,7 @@ export function addNewBlog () {
     removebtn.addEventListener("click",function(){
         bloglistitem.remove();
     })
-    setTimeout(function (){
-        islist.appendChild(bloglistitem);
-},0);
+    
 }
 
 export function removeBlog(){
