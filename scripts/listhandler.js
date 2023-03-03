@@ -18,7 +18,7 @@ export function addNewBlog () {
     }
     let bloglistitem = document.createElement('li');
     bloglistitem.class = 'listitems';
-    bloglistitem.innerHTML = title.textContent;
+    bloglistitem.value = title.value + ' ( ' + date.value + ' ) - ' + summary.value;  ;
     
 
 
