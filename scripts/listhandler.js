@@ -1,3 +1,4 @@
+let count = 0;
 export function addNewBlog () {
     let title = document.getElementById('blogtitle');
     let date =  document.getElementById('blogdate');
@@ -17,12 +18,26 @@ export function addNewBlog () {
         listcontainer.appendChild(bloglist);
     }
     let bloglistitem = document.createElement('li');
+    let itemdesc = document.createElement('p');
+    let editbtn = document.createElement('button');
+    editbtn.class = 'editbtn'
+    let removebtn = document.createElement('button')
+    removebtn.class = 'removebtn'
     bloglistitem.class = 'listitems';
-    bloglistitem.value = title.value + ' ( ' + date.value + ' ) - ' + summary.value;  ;
-    
-
-
+    bloglistitem.id = count.toString();
+    count = count + 1;
+    itemdesc.value = title.value + ' ( ' + date.value + ' ) - ' + summary.value;  
+    bloglistitem.append(itemdesc);
+    bloglistitem.append(editbtn);
+    bloglistitem.append(removebtn);
+    removebtn.addEventListener("click",function(){
+        bloglistitem.remove();
+    })
+    setTimeout(function (){
+        bloglist.appendChild(bloglistitem);
+},0);
 }
+
 export function removeBlog(){
 
 }
