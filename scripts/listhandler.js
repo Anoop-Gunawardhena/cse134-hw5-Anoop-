@@ -10,6 +10,14 @@ export function addNewBlog () {
         window.alert("please enter a summary");
         return;
     }
+    let islist  = document.getElementById('bloglist');
+    if(islist == null){
+         let bloglist =document.createElement('ul');
+    }
+    bloglistitem = document.createElement('li');
+    bloglistitem.class = 'listitems';
+    bloglistitem.innerHTML = title.textContent;
+    
 
 
 }
