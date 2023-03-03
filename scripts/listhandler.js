@@ -14,8 +14,8 @@ export function addNewBlog () {
         window.alert("please enter a summary");
         return;
     }
-    if( date.value == 'dd/mm/yyyy'){
-        window.alert('please enter a data');
+    if( date.value == ''){
+        window.alert('please enter a date');
     }
     let dateval = date.value;
     let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
@@ -66,8 +66,8 @@ export function editExistingBlog(event){
         window.alert("please enter a summary");
         return;
     }
-    if( date.value == 'dd/mm/yyyy'){
-        window.alert('please enter a data');
+    if( date.value == ''){
+        window.alert('please enter a date');
     }
     let dateval = date.value;
     let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
