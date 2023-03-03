@@ -70,7 +70,7 @@ export function editExistingBlog(event){
         window.alert('please enter a data');
     }
     let dateval = date.value;
-    let lastfour = (dateval).substrng(dateval.length-5,dateval.length-1);
+    let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     paratoedit.innerText= title.value + ' ( ' + lastfour + ' ) - ' + summary.value;
 
 
