@@ -39,9 +39,9 @@ export function startblogs(event){
     });
     if (btn.id != 'addbtn'){
         savebtn.id == btn.id;
-        setTimeout(function(){savebtn.addEventListener('click',editExistingBlog);
-    },0)
-}
+        savebtn.addEventListener('click',editExistingBlog);
+    }
+
     else{
     savebtn.addEventListener("click",addNewBlog)   //form.style.flexDirection = 'column';
 }
