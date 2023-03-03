@@ -17,7 +17,7 @@
 }
 function startblogs(){
     let currentgap = bodycont.style.gap
-    maincont.style.display.flexDirection = 'column'
+    maincont.style.flexDirection = 'column'
     let formclone = formtemplate.content.cloneNode(true)
     let form =  formclone.querySelector('form');
     maincont.append(form);
