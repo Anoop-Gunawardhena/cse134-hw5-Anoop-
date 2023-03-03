@@ -13,6 +13,6 @@ export function addNewBlog () {
 
 
 }
-function removeBlog(){
+export function removeBlog(){
 
 }
