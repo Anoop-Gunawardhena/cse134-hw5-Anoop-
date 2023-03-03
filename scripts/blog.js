@@ -1,5 +1,5 @@
 
-    import {addNewBlog,removeBlog} from '../scripts/listhandler.js'
+    import {addNewBlog,editExistingBlog} from '../scripts/listhandler.js'
     export let maincont = document.getElementById('listcontainer');
     let bodycont = document.getElementById('bodycontainer');
     let addbtn = document.getElementById('addbtn');
@@ -18,7 +18,8 @@
 
     },0);
 }
-function startblogs(){
+function startblogs(event){
+    let btn = event.target;
     let check = document.getElementById('subform');
     if(check != null){
         check.remove();
@@ -36,9 +37,13 @@ function startblogs(){
         let dbox = document.getElementById('subform');
         dbox.remove();
     });
-    savebtn.addEventListener("click",addNewBlog)
-    //form.style.flexDirection = 'column';
-
+    if (btn.id == 'addbtn'){
+        savebtn.id == btn.id;
+        savebtn.addEventListener('click',editExistingBlog);
+    }
+    else{
+    savebtn.addEventListener("click",addNewBlog)   //form.style.flexDirection = 'column';
+}
 }
 addbtn.style.width = '60px';
 addbtn.addEventListener("click",startblogs);

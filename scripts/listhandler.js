@@ -1,4 +1,4 @@
-import {maincont} from '../scripts/blog.js'
+import {maincont,startblogs} from '../scripts/blog.js'
 let count = 0;
 let bloglisttemp = document.getElementById('bloglisttemp')
 export function addNewBlog () {
@@ -17,8 +17,8 @@ export function addNewBlog () {
     if( date.value == 'dd/mm/yyyy'){
         window.alert('please enter a data');
     }
-    dateval = data.value
-    lastfour = (dateval).substrng(dateval.length-5,dateval.length-1);
+    let dateval = date.value;
+    let lastfour = (dateval).substrng(dateval.length-5,dateval.length-1);
     let listclone = bloglisttemp.content.cloneNode(true)
     let list =  listclone.querySelector('ul');
     maincont.appendChild(list);
@@ -40,12 +40,13 @@ export function addNewBlog () {
     bloglistitem.append(itemdesc);
     bloglistitem.append(editbtn);
     bloglistitem.append(removebtn);
+    editbtn.addEventListener("click",startblogs)
     removebtn.addEventListener("click",function(){
         bloglistitem.remove();
     })
     
 }
 
-export function removeBlog(){
+export function editExistingBlog(){
 
 }
