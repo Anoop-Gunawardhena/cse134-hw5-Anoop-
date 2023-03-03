@@ -16,6 +16,7 @@ export function addNewBlog () {
     }
     if( date.value == ''){
         window.alert('please enter a date');
+        return;
     }
     let dateval = date.value;
     let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
@@ -38,7 +39,9 @@ export function addNewBlog () {
     count = count + 1;
     bloglistitem.style.display = 'flex';
     bloglistitem.style.flexDirection = 'row';
-    itemdesc.innerText= title.value + ' ( ' + lastfour + ' ) - ' + summary.value;  
+    titletext = title.value;
+    titletext = titletext.bold();
+    itemdesc.innerText= titletext + ' ( ' + lastfour + ' ) - ' + summary.value;  
     bloglistitem.append(itemdesc);
     bloglistitem.append(editbtn);
     bloglistitem.append(removebtn);
@@ -70,10 +73,13 @@ export function editExistingBlog(event){
     }
     if( date.value == ''){
         window.alert('please enter a date');
+        return;
     }
     let dateval = date.value;
     let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
-    paratoedit.innerText= title.value + ' ( ' + lastfour + ' ) - ' + summary.value;
+    titletext = title.value;
+    titletext = titletext.bold();
+    paratoedit.innerText= titletext + ' ( ' + lastfour + ' ) - ' + summary.value;
 
 
 }
