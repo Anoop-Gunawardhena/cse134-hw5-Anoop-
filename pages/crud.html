@@ -8,7 +8,20 @@
 </head>
 <body>
 <h1> My Blog posts</h1>
-<div id ="Maincontainer"></div><button type ="button">Add a Blog post</button>
+<div id="bodycontainer">
+<div id ="listcontainer">
+</div>
+<button type = "button">Add a blog</button>
+<template>
+    <form action="submit">
+        <label>Post Title<input type="text" id='blogtitle'></label>
+        <label>Post Date<input type="date" id='blogdate'></label>
+        <label>Post Summary<input type="date" id='blogsummary'></label>
+        <button type="button">Save</button>
+        <button type="cancel">Cancel</button>
+    </form>
+</template>
+</div>
 <script src = '../scripts/blog.js'></script>
 </body>
 </html>
