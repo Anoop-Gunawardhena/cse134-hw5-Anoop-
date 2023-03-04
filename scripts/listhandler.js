@@ -79,7 +79,9 @@ export function createItem(titletext, tostore, list){
     removebtn.style.border = 'none';
     removebtn.style.background = 'none';
     bloglistitem.class = 'listitems';
-    bloglistitem.id = titletext.toString();
+    let titstring = titletext.toString()
+    let simptit = titstring.replace( /(<([^>]+)>)/ig, '');
+    bloglistitem.id = simptit;
     console.log('stored id is' + titletext + tostore);
     editbtn.id = titletext.toString();
     console.log("editbtn id is " + editbtn.id);
@@ -104,10 +106,11 @@ export function createItem(titletext, tostore, list){
 export function editExistingBlog(id,titletext,tostore){
     //console.log(btn);
     //let btntid = btn.id;
+    let locatorstring  = id.titstring.replace( /(<([^>]+)>)/ig, '');
     window.localStorage.removeItem(id)
     let list = document.getElementById('bloglist');
-    let btn = document.getElementById(id);
-    let bloglistitem = list.querySelector('#'+btn.id);
+   // let btn = document.getElementById(id);
+    let bloglistitem = list.querySelector('#'+locatorstring);
     console.log('bloglistitem id is ' + bloglistitem.id)
     //let btnid = parseInt(id);
     //btnid = btnid.toString();
