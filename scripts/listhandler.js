@@ -74,10 +74,10 @@ export function createItem(titletext, tostore, list){
     editbtn.style.background = 'none';
     let editimg = document.createElement('img')
     editimg.src = '../images/edit.png';
-    editimg.width = '5px';
-    editimg.height = '5px';
-    editbtn.width = '6px';
-    editbtn.height = '6px';
+    editimg.style.width = '5px';
+    editimg.style.height = '5px';
+    editbtn.style.width = '6px';
+    editbtn.style.height = '6px';
     editbtn.appendChild(editimg);
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
@@ -86,10 +86,10 @@ export function createItem(titletext, tostore, list){
     removebtn.style.background = 'none';
     let removeimg = document.createElement('img')
     removeimg.src = '../images/delete.jpg';
-    removeimg.width = '5px';
-    removeimg.height = '5px';
-    removebtn.width = '6px';
-    removebtn.height = '6px';
+    removeimg.style.width = '5px';
+    removeimg.style.height = '5px';
+    removebtn.style.width = '6px';
+    removebtn.style.height = '6px';
     removebtn.appendChild(removeimg);
     bloglistitem.class = 'listitems';
     let titstring = titletext.toString()
