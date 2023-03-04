@@ -90,6 +90,7 @@ export function createItem(titletext, tostore, list){
     removeimg.height = '5px';
     removebtn.width = '6px';
     removebtn.height = '6px';
+    removebtn.appendChild(removeimg);
     bloglistitem.class = 'listitems';
     let titstring = titletext.toString()
     let simptit = titstring.replace( /(<([^>]+)>)/ig, '');
