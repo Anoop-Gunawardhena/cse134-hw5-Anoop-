@@ -3,7 +3,7 @@ import {maincont,startblogs} from '../scripts/blog.js'
 let form = document.querySelector('form');
 export function addNewBlog (titletext, tostore) {
     window.localStorage.setItem(titletext,tostore)
-    let list = document.getElementById('ul')
+    let list = document.getElementById('bloglist')
     createItem(titletext, tostore, list);
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     // let listclone = bloglisttemp.content.cloneNode(true)
@@ -46,6 +46,7 @@ export function buildList(){
     let bloglisttemp = document.getElementById('bloglisttemp');
     let listclone = bloglisttemp.content.cloneNode(true)
     let list =  listclone.querySelector('ul');
+    list.id = 'bloglist'
     maincont.appendChild(list);
     console.log('list made');
     for ( let i = 0 ; i < localStorage.length; i++){
