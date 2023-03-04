@@ -81,7 +81,7 @@ export function createItem(titletext, tostore, list){
     bloglistitem.class = 'listitems';
     let titstring = titletext.toString()
     let simptit = titstring.replace( /(<([^>]+)>)/ig, '');
-    bloglistitem.id = simptit;
+    bloglistitem.id = 'c'+simptit;
     console.log('stored id is' + titletext + tostore);
     editbtn.id = titletext.toString();
     console.log("editbtn id is " + editbtn.id);
