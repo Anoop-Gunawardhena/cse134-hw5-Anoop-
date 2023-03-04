@@ -82,6 +82,7 @@ export function createItem(titletext, tostore, list){
     bloglistitem.id = titletext.toString() + tostore.toString();
     console.log('stored id is' + titletext + tostore);
     editbtn.id = titletext.toString();
+    console.log("editbtn id is " + editbtn.id);
     //removebtn.id = 'removebrn'+ count.toString();
     //count = count + 1;
     bloglistitem.style.display = 'flex';
