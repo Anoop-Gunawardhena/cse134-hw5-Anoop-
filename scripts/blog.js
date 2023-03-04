@@ -32,6 +32,7 @@ export function startblogs(event){
         bodycont.style.flexDirection = 'column';
     }
     let btn = event.target;
+    console.log('event target is ' + btn);
     let check = document.getElementById('subform');
     if(check != null){
         check.remove();
