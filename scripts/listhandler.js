@@ -26,10 +26,11 @@ export function addNewBlog () {
     maincont.appendChild(list);
     let bloglistitem = document.createElement('li');
     list.appendChild(bloglistitem);
+    let space = document.createElement('br');
     let itemdesc = document.createElement('p');
     let editbtn = document.createElement('button');
-    editbtn.class = 'editbtn'
-    editbtn.innerText = 'Edit'
+    editbtn.class = 'editbtn';
+    editbtn.innerText = 'Edit';
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
     removebtn.innerText = 'Remove'
@@ -44,6 +45,7 @@ export function addNewBlog () {
     titletext = titletext.bold();
     itemdesc.innerHTML= titletext + ' ( ' + dateval + ' ) - ' + summary.value;  
     bloglistitem.append(itemdesc);
+    bloglistitem.append(space);
     bloglistitem.append(editbtn);
     bloglistitem.append(removebtn);
     editbtn.addEventListener("click",startblogs)
