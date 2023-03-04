@@ -79,7 +79,7 @@ export function createItem(titletext, tostore, list){
     // editbtn.style.width = '20px';
      editbtn.style.height = '20px';
     //editbtn.appendChild(editimg);
-    editbtn.style.backgroundImage = '../images/edit.png';
+    editbtn.style.backgroundImage = 'url(../images/edit.png)';
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
     removebtn.style.border = 'none';
@@ -91,7 +91,7 @@ export function createItem(titletext, tostore, list){
     // removebtn.style.width = '6px';
     // removebtn.style.height = '6px';
     //removebtn.appendChild(removeimg);
-    removebtn.style.backgroundImage = '../images/delete.jpg'
+    removebtn.style.backgroundImage = 'url(../images/delete.jpg)'
     bloglistitem.class = 'listitems';
     let titstring = titletext.toString()
     let simptit = titstring.replace( /(<([^>]+)>)/ig, '');
