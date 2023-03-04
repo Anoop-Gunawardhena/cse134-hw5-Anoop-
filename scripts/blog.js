@@ -28,7 +28,7 @@ else{
 
     
 export function startblogs(event){
-    if(bodycont.style.flexDirection = 'row'){
+    if(bodycont.style.flexDirection == 'row'){
         bodycont.style.flexDirection = 'column';
     }
     let btn = event.target;
