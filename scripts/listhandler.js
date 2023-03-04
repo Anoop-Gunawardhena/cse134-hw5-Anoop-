@@ -71,25 +71,27 @@ export function createItem(titletext, tostore, list){
     let editbtn = document.createElement('button');
     editbtn.class = 'editbtn';;
     editbtn.style.border = 'none'
-    editbtn.style.background = 'none';
-    let editimg = document.createElement('img')
-    editimg.src = '../images/edit.png';
-    editimg.style.width = '15px';
-    editimg.style.height = '15px';
-    editbtn.style.width = '20px';
-    editbtn.style.height = '20px';
-    editbtn.appendChild(editimg);
+    //editbtn.style.background = 'none';
+    //let editimg = document.createElement('img')
+    // editimg.src = ;
+    // editimg.style.width = '15px';
+    // editimg.style.height = '15px';
+    // editbtn.style.width = '20px';
+     editbtn.style.height = '20px';
+    //editbtn.appendChild(editimg);
+    editbtn.style.backgroundImage = '../images/edit.png';
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
     removebtn.style.border = 'none';
-    removebtn.style.background = 'none';
-    let removeimg = document.createElement('img')
-    removeimg.src = '../images/delete.jpg';
-    removeimg.style.width = '5px';
-    removeimg.style.height = '5px';
-    removebtn.style.width = '6px';
-    removebtn.style.height = '6px';
-    removebtn.appendChild(removeimg);
+   // removebtn.style.background = 'none';
+    // let removeimg = document.createElement('img')
+    // removeimg.src = '../images/delete.jpg';
+    // removeimg.style.width = '5px';
+    // removeimg.style.height = '5px';
+    // removebtn.style.width = '6px';
+    // removebtn.style.height = '6px';
+    //removebtn.appendChild(removeimg);
+    removebtn.style.backgroundImage = '../images/delete.jpg'
     bloglistitem.class = 'listitems';
     let titstring = titletext.toString()
     let simptit = titstring.replace( /(<([^>]+)>)/ig, '');
