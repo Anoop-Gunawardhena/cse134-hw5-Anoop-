@@ -26,7 +26,9 @@ export function addNewBlog () {
     maincont.appendChild(list);
     let bloglistitem = document.createElement('li');
     list.appendChild(bloglistitem);
-    let space = document.createElement('br');
+    let space = document.createElement('p');
+    space.innerText = ' '
+    space.class = 'contentoptionspace'
     let itemdesc = document.createElement('p');
     let editbtn = document.createElement('button');
     editbtn.class = 'editbtn';
@@ -47,6 +49,7 @@ export function addNewBlog () {
     bloglistitem.append(itemdesc);
     bloglistitem.append(space);
     bloglistitem.append(editbtn);
+    bloglistitem.append(space);
     bloglistitem.append(removebtn);
     editbtn.addEventListener("click",startblogs)
     removebtn.addEventListener("click",function(){
@@ -58,7 +61,7 @@ export function addNewBlog () {
 export function editExistingBlog(id){
     //console.log(btn);
     //let btntid = btn.id;
-    btnid = parseInt(id);
+    let btnid = parseInt(id);
     btnid = btnid.toString();
     let itemtoedit = document.getElementById(btnid);
     let paratoedit = itemtoedit.querySelector('p');
