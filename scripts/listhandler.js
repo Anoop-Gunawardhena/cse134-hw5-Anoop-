@@ -4,7 +4,7 @@ let form = document.querySelector('form');
 export function addNewBlog (titletext, tostore) {
     window.localStorage.setItem(titletext.toString(),tostore.toString())
     let list = document.getElementById('bloglist')
-    createItem(titletext.toString(), tostore.toString(), list);
+    createItem(titletext, tostore, list);
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     // let listclone = bloglisttemp.content.cloneNode(true)
     // let list =  listclone.querySelector('ul');
@@ -76,8 +76,8 @@ export function createItem(titletext, tostore, list){
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
     removebtn.innerText = 'Remove'
-    removebtn.border = 'none';
-    removebtn.background = 'none';
+    removebtn.style.border = 'none';
+    removebtn.style.background = 'none';
     bloglistitem.class = 'listitems';
     bloglistitem.id = titletext.toString() + tostore.toString();
     console.log('stored id is' + titletext + tostore);
