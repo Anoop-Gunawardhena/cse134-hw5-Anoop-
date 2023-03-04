@@ -47,12 +47,12 @@ export function startblogs(event){
     }
 
     else{
-    console.log("id of button that called startblogs " + savebtn.id)
+    console.log("id of button that called startblogs " + savebtn.id);s
     savebtn.addEventListener("click",function(){
         form.remove();
         addNewBlog();
 
-    })   //form.style.flexDirection = 'column';
+    });  //form.style.flexDirection = 'column';
 }
 }
 addbtn.style.width = '60px';
