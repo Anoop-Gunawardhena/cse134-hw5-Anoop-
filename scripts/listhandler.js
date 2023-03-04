@@ -70,10 +70,14 @@ export function createItem(titletext, tostore, list){
     itemdesc.class = 'parag';
     let editbtn = document.createElement('button');
     editbtn.class = 'editbtn';
+    editbtn.style.border = 'none'
+    editbtn.style.background = 'none'
     editbtn.innerText = 'Edit';
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
     removebtn.innerText = 'Remove'
+    removebtn.border = 'none';
+    removebtn.background = 'none';
     bloglistitem.class = 'listitems';
     bloglistitem.id = titletext.toString() + tostore.toString();
     console.log('stored id is' + titletext + tostore);
