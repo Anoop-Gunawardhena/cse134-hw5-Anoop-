@@ -110,12 +110,12 @@ export function editExistingBlog(id,titletext,tostore){
     window.localStorage.removeItem(id)
     let list = document.getElementById('bloglist');
    // let btn = document.getElementById(id);
-    let bloglistitem = list.querySelector('#'+locatorstring);
+    let bloglistitem = list.querySelector('#c'+locatorstring);
     console.log('bloglistitem id is ' + bloglistitem.id)
     //let btnid = parseInt(id);
     //btnid = btnid.toString();
    // let itemtoedit = document.querySelector(btnid);
-    let paratoedit = bloglistitem.querySelector('#parag');
+    let paratoedit = bloglistitem.querySelector('parag');
     let listcontainer = document.getElementById('listcontainer');
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     paratoedit.innerHTML= titletext + tostore;
