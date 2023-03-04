@@ -73,6 +73,7 @@ export function createItem(titletext, tostore, list){
     removebtn.innerText = 'Remove'
     bloglistitem.class = 'listitems';
     bloglistitem.id = titletext + tostore;
+    console.log('stored id is' + titletext + tostore);
     editbtn.id = titletext;
     //removebtn.id = 'removebrn'+ count.toString();
     //count = count + 1;
