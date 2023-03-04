@@ -107,7 +107,7 @@ export function editExistingBlog(id,titletext,tostore){
     window.localStorage.removeItem(id)
     let btn = document.getElementById(id);
     let bloglistitem = btn.parentElement;
-    console.log('bloglistitem is ' + bloglistitem.toString())
+    console.log('bloglistitem id is ' + bloglistitem.id)
     //let btnid = parseInt(id);
     //btnid = btnid.toString();
    // let itemtoedit = document.querySelector(btnid);
