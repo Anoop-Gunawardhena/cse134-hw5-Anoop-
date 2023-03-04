@@ -47,7 +47,7 @@ export function startblogs(event){
     }
 
     else{
-    console.log("id of button that called startblogs " + savebtn.id);s
+    console.log("id of button that called startblogs " + savebtn.id);
     savebtn.addEventListener("click",function(){
         form.remove();
         addNewBlog();
