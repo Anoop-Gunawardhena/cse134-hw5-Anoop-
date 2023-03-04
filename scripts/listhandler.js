@@ -69,29 +69,15 @@ export function createItem(titletext, tostore, list){
     let itemdesc = document.createElement('p');
     itemdesc.id = 'parag';
     let editbtn = document.createElement('button');
-    editbtn.class = 'editbtn';;
+    editbtn.class = 'editbtn';
     editbtn.style.border = 'none'
-    //editbtn.style.background = 'none';
-    //let editimg = document.createElement('img')
-    // editimg.src = ;
-    // editimg.style.width = '15px';
-    // editimg.style.height = '15px';
-    // editbtn.style.width = '20px';
-     editbtn.style.height = '20px';
-    //editbtn.appendChild(editimg);
-    editbtn.style.backgroundImage = 'url(../images/edit.png)';
+    editbtn.style.background = 'none'
+    editbtn.innerHTML = '<b>Edit</b>';
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
+    removebtn.innerHTML = '<b> Remove </b>'
     removebtn.style.border = 'none';
-   // removebtn.style.background = 'none';
-    // let removeimg = document.createElement('img')
-    // removeimg.src = '../images/delete.jpg';
-    // removeimg.style.width = '5px';
-    // removeimg.style.height = '5px';
-    // removebtn.style.width = '6px';
-    // removebtn.style.height = '6px';
-    //removebtn.appendChild(removeimg);
-    removebtn.style.backgroundImage = 'url(../images/delete.jpg)'
+    removebtn.style.background = 'none';
     bloglistitem.class = 'listitems';
     let titstring = titletext.toString()
     let simptit = titstring.replace( /(<([^>]+)>)/ig, '');
