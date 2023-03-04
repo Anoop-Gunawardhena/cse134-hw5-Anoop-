@@ -52,6 +52,8 @@ export function buildList(){
     for ( let i = 0 ; i < localStorage.length; i++){
         let key = localStorage.key[i];
         let data = localStorage.getItem(key);
+        console.log("key is " + key)
+        console.log('data is ' + data);
         createItem(key, data, list);
     }
 }
