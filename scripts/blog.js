@@ -31,8 +31,8 @@ export function startblogs(event){
     if(bodycont.style.flexDirection == 'row'){
         bodycont.style.flexDirection = 'column';
     }
-    let btn = event.target;
-    console.log('event target is ' + btn);
+    let btn = event.currentTarget;
+    console.log('event target is ' + btn.toString());
     let check = document.getElementById('subform');
     if(check != null){
         check.remove();
