@@ -49,7 +49,7 @@ export function buildList(){
     list.id = 'bloglist'
     maincont.appendChild(list);
     console.log('list made');
-    for ( let i = 0 ; i < localStorage.length; i++){
+    for ( let i = 1 ; i < localStorage.length +1; i++){
         let key = localStorage.key[i];
         let data = localStorage.getItem(key);
         console.log("key is " + key)
