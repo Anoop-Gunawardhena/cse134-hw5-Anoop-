@@ -85,7 +85,7 @@ function validateInputs (){
     dateval = dateval.substring(0,4);
     let titletext = title.value;
     titletext = titletext.bold();
-    let tostore = '( '+ dateval + ' ) : '+ summary.textContent;
+    let tostore = '( '+ dateval + ' ) : '+ summary.value;
     return [titletext,tostore]
 }
 addbtn.style.width = '60px';
