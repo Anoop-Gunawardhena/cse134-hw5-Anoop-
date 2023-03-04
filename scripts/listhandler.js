@@ -47,7 +47,7 @@ export function buildList(){
     let listclone = bloglisttemp.content.cloneNode(true)
     let list =  listclone.querySelector('ul');
     maincont.appendChild(list);
-    for ( i = 0 ; i < localStorage.length; i++){
+    for ( let i = 0 ; i < localStorage.length; i++){
         let key = localStorage.key[i];
         let data = localStorage.getItem(key);
         createItem(key, data, list);
