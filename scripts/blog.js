@@ -1,5 +1,5 @@
 
-    import {addNewBlog,editExistingBlog} from '../scripts/listhandler.js'
+    import {addNewBlog,buildList,editExistingBlog} from '../scripts/listhandler.js'
     export let maincont = document.getElementById('listcontainer');
     let bodycont = document.getElementById('bodycontainer');
     let addbtn = document.getElementById('addbtn');
@@ -18,9 +18,8 @@
 
     },0);
 }
-else{
-
-}
+buildList();
+    
 export function startblogs(event){
     let btn = event.target;
     let check = document.getElementById('subform');
@@ -44,20 +43,50 @@ export function startblogs(event){
         savebtn.id = btn.id;
         console.log("id of button that called startblogs " + savebtn.id)
         savebtn.addEventListener('click',function(){
-            let title = document.getElementById('blogtitle')
-            editExistingBlog(savebtn.id);
+            let inputs = validateInputs();
+            if(inputs != null){
+
+            editExistingBlog(savebtn.id,inputs[0],inputs[1]);
             form.remove();
+            }
         });
     }
 
     else{
     console.log("id of button that called startblogs " + savebtn.id);
     savebtn.addEventListener("click",function(){
-        addNewBlog();
+        let inputs = validateInputs();
+        if(inputs != null){
+        addNewBlog(inputs[0],inputs[1]);
         form.remove();
+        }
 
     });  //form.style.flexDirection = 'column';
 }
+}
+function validateInputs (){
+    let title = document.getElementById('blogtitle');
+    let date =  document.getElementById('blogdate');
+    let summary = document.getElementById('blogsummary');
+    //let listcontainer = document.getElementById('listcontainer');
+    if(title.value == null || title.value == ''){
+        window.alert("please enter a title");
+        return;
+    }
+    if(summary.value == null || summary.value == ''){
+        window.alert("please enter a summary");
+        return;
+    }
+    if( date.value == ''){
+        window.alert('please enter a date');
+        return;
+    }
+    let dateval = date.value;
+    dateval = dateval.substring(0,4);
+    let titletext = title.value;
+    titletext = titletext.bold();
+    let tostore = '( '+ dateval + ' ) : '+ summary.value;
+    return [titletext,tostore]
 }
 addbtn.style.width = '60px';
 addbtn.addEventListener("click",startblogs);

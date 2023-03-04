@@ -2,28 +2,9 @@ import {maincont,startblogs} from '../scripts/blog.js'
 //let count = 0;
 let bloglisttemp = document.getElementById('bloglisttemp')
 let form = document.querySelector('form');
-export function addNewBlog () {
-    let title = document.getElementById('blogtitle');
-    let date =  document.getElementById('blogdate');
-    let summary = document.getElementById('blogsummary');
-    let listcontainer = document.getElementById('listcontainer');
-    if(title.value == null || title.value == ''){
-        window.alert("please enter a title");
-        return;
-    }
-    if(summary.value == null || summary.value == ''){
-        window.alert("please enter a summary");
-        return;
-    }
-    if( date.value == ''){
-        window.alert('please enter a date');
-        return;
-    }
-    let dateval = date.value;
-    dateval = dateval.substring(0,4);
-    let titletext = title.value;
-    titletext = titletext.bold();
-    let tostore = '( '+ dateval + ' ) : '+ summary.value;
+export function addNewBlog (titletext, tostore) {
+    
+    
     window.localStorage.setItem(titletext,tostore)
     let list = document.getElementById('ul')
     createItem(titletext, tostore, list);
@@ -83,6 +64,7 @@ export function createItem(titletext, tostore, list){
     space.textContent = '  ';
     space.class = 'contentoptionspace';
     let itemdesc = document.createElement('p');
+    itemdesc.class = 'parag';
     let editbtn = document.createElement('button');
     editbtn.class = 'editbtn';
     editbtn.innerText = 'Edit';
@@ -109,35 +91,23 @@ export function createItem(titletext, tostore, list){
     
 }
 
-export function editExistingBlog(id){
+export function editExistingBlog(id,titletext,tostore){
     //console.log(btn);
     //let btntid = btn.id;
+    let btn = document.getElementById(id);
+    let bloglistitem = btn.parentElement;
 
-    let btnid = parseInt(id);
-    btnid = btnid.toString();
-    let itemtoedit = document.getElementById(btnid);
-    let paratoedit = itemtoedit.querySelector('p');
-    let title = document.getElementById('blogtitle');
-    let date =  document.getElementById('blogdate');
-    let summary = document.getElementById('blogsummary');
+    //let btnid = parseInt(id);
+    //btnid = btnid.toString();
+   // let itemtoedit = document.querySelector(btnid);
+    let paratoedit = bloglistitem.querySelector('.parag');
     let listcontainer = document.getElementById('listcontainer');
-    if(title.value == null || title.value == ''){
-        window.alert("please enter a title");
-        return;
-    }
-    if(summary.value == null || summary.value == ''){
-        window.alert("please enter a summary");
-        return;
-    }
-    if( date.value == ''){
-        window.alert('please enter a date');
-        return;
-    }
     let dateval = date.value;
-    let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
+    //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     let titletext = title.value;
+    let tostore = '( '+ dateval + ' ) : '+ summary.value;
     titletext = titletext.bold();
-    paratoedit.innerHTML= titletext + ' ( ' + lastfour + ' ) - ' + summary.value;
+    paratoedit.innerHTML= titletext + tostore;
 
 
 }
