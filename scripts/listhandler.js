@@ -2,9 +2,9 @@ import {maincont,startblogs} from '../scripts/blog.js'
 //let count = 0;
 let form = document.querySelector('form');
 export function addNewBlog (titletext, tostore) {
-    window.localStorage.setItem(titletext,tostore)
+    window.localStorage.setItem(titletext.toString(),tostore.toString())
     let list = document.getElementById('bloglist')
-    createItem(titletext, tostore, list);
+    createItem(titletext.toString(), tostore.toString(), list);
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     // let listclone = bloglisttemp.content.cloneNode(true)
     // let list =  listclone.querySelector('ul');
@@ -74,9 +74,9 @@ export function createItem(titletext, tostore, list){
     removebtn.class = 'removebtn'
     removebtn.innerText = 'Remove'
     bloglistitem.class = 'listitems';
-    bloglistitem.id = titletext + tostore;
+    bloglistitem.id = titletext.toString() + tostore.toString();
     console.log('stored id is' + titletext + tostore);
-    editbtn.id = titletext;
+    editbtn.id = titletext.toString();
     //removebtn.id = 'removebrn'+ count.toString();
     //count = count + 1;
     bloglistitem.style.display = 'flex';
@@ -89,7 +89,7 @@ export function createItem(titletext, tostore, list){
     bloglistitem.append(removebtn);
     editbtn.addEventListener("click",startblogs)
     removebtn.addEventListener("click",function(){
-        window.localStorage.removeItem(titletext);
+        window.localStorage.removeItem(titletext.toString());
         bloglistitem.remove();
     })
     
@@ -108,6 +108,6 @@ export function editExistingBlog(id,titletext,tostore){
     let listcontainer = document.getElementById('listcontainer');
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     paratoedit.innerHTML= titletext + tostore;
-    window.localStorage.setItem(titletext,tostore)
+    window.localStorage.setItem(titletext.toString(),tostore.toString())
 
 }
