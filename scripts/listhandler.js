@@ -67,7 +67,7 @@ export function createItem(titletext, tostore, list){
     space.innerHTML = '  ';
     space.class = 'contentoptionspace';
     let itemdesc = document.createElement('p');
-    itemdesc.class = 'parag';
+    itemdesc.id = 'parag';
     let editbtn = document.createElement('button');
     editbtn.class = 'editbtn';
     editbtn.style.border = 'none'
@@ -115,7 +115,7 @@ export function editExistingBlog(id,titletext,tostore){
     //let btnid = parseInt(id);
     //btnid = btnid.toString();
    // let itemtoedit = document.querySelector(btnid);
-    let paratoedit = bloglistitem.querySelector('.parag');
+    let paratoedit = bloglistitem.querySelector('#parag');
     let listcontainer = document.getElementById('listcontainer');
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     paratoedit.innerHTML= titletext + tostore;
