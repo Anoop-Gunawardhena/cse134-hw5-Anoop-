@@ -64,7 +64,7 @@ export function createItem(titletext, tostore, list){
     let bloglistitem = document.createElement('li');
     list.appendChild(bloglistitem);
     let space = document.createElement('p');
-    space.textContent = '  ';
+    space.innerHTML = '  ';
     space.class = 'contentoptionspace';
     let itemdesc = document.createElement('p');
     itemdesc.class = 'parag';
