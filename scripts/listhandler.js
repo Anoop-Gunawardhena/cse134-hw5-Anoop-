@@ -72,7 +72,7 @@ export function createItem(titletext, tostore, list){
     bloglistitem.class = 'listitems';
     bloglistitem.id = titletext + tostore;
     editbtn.id = titletext;
-    removebtn.id = 'removebrn'+ count.toString();
+    //removebtn.id = 'removebrn'+ count.toString();
     //count = count + 1;
     bloglistitem.style.display = 'flex';
     bloglistitem.style.flexDirection = 'row';
@@ -84,6 +84,7 @@ export function createItem(titletext, tostore, list){
     bloglistitem.append(removebtn);
     editbtn.addEventListener("click",startblogs)
     removebtn.addEventListener("click",function(){
+        window.localStorage.removeItem(titletext);
         bloglistitem.remove();
     })
     
