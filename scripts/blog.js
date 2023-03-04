@@ -7,7 +7,7 @@
     let cancelbtn;
     let savebtn;
     console.log(maincont.childElementCount);
-    if(maincont.childElementCount == 0){
+    if(localStorage.length == 0){
         bodycont.style.display = 'flex';
         bodycont.style.flexDirection = 'row';
         bodycont. style.gap = '10px'
@@ -17,6 +17,9 @@
     maincont.appendChild(displayp);
 
     },0);
+}
+else{
+
 }
 export function startblogs(event){
     let btn = event.target;
@@ -41,6 +44,7 @@ export function startblogs(event){
         savebtn.id = btn.id;
         console.log("id of button that called startblogs " + savebtn.id)
         savebtn.addEventListener('click',function(){
+            let title = document.getElementById('blogtitle')
             editExistingBlog(savebtn.id);
             form.remove();
         });
