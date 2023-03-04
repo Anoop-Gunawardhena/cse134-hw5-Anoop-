@@ -41,16 +41,16 @@ export function startblogs(event){
         savebtn.id = btn.id;
         console.log("id of button that called startblogs " + savebtn.id)
         savebtn.addEventListener('click',function(){
-            form.remove();
             editExistingBlog(savebtn.id);
+            form.remove();
         });
     }
 
     else{
     console.log("id of button that called startblogs " + savebtn.id);
     savebtn.addEventListener("click",function(){
-        form.remove();
         addNewBlog();
+        form.remove();
 
     });  //form.style.flexDirection = 'column';
 }
