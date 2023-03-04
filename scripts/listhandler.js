@@ -106,7 +106,7 @@ export function createItem(titletext, tostore, list){
 export function editExistingBlog(id,titletext,tostore){
     //console.log(btn);
     //let btntid = btn.id;
-    let locatorstring  = id.titstring.replace( /(<([^>]+)>)/ig, '');
+    let locatorstring  = id.replace( /(<([^>]+)>)/ig, '');
     window.localStorage.removeItem(id)
     let list = document.getElementById('bloglist');
    // let btn = document.getElementById(id);
