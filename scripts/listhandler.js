@@ -1,6 +1,5 @@
 import {maincont,startblogs} from '../scripts/blog.js'
 //let count = 0;
-let bloglisttemp = document.getElementById('bloglisttemp')
 let form = document.querySelector('form');
 export function addNewBlog (titletext, tostore) {
     window.localStorage.setItem(titletext,tostore)
@@ -44,6 +43,7 @@ export function addNewBlog (titletext, tostore) {
 }
 
 export function buildList(){
+    let bloglisttemp = document.getElementById('bloglisttemp');
     let listclone = bloglisttemp.content.cloneNode(true)
     let list =  listclone.querySelector('ul');
     maincont.appendChild(list);
