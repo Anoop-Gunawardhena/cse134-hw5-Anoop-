@@ -74,14 +74,13 @@ export function createItem(titletext, tostore, list){
     editbtn.style.background = 'none';
     let editimg = document.createElement('img')
     editimg.src = '../images/edit.png';
-    editimg.style.width = '5px';
-    editimg.style.height = '5px';
-    editbtn.style.width = '6px';
-    editbtn.style.height = '6px';
+    editimg.style.width = '15px';
+    editimg.style.height = '15px';
+    editbtn.style.width = '20px';
+    editbtn.style.height = '20px';
     editbtn.appendChild(editimg);
     let removebtn = document.createElement('button')
     removebtn.class = 'removebtn'
-    removebtn.innerHTML = '<b> Remove </b>'
     removebtn.style.border = 'none';
     removebtn.style.background = 'none';
     let removeimg = document.createElement('img')
