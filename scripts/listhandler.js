@@ -50,7 +50,7 @@ export function buildList(){
     maincont.appendChild(list);
     console.log('list made');
     console.log('localstorage size is ' + localStorage.length)
-    for ( let i = 0 ; i < localStorage.length +1; i++){
+    for ( let i = 0 ; i < localStorage.length; i++){
         let key = localStorage.key(i);
         let data = localStorage.getItem(key);
         console.log("key is " + key)
