@@ -10,9 +10,10 @@
     console.log(maincont.childElementCount);
     
         bodycont.style.display = 'flex';
+       
+        if(localStorage.length == 0){
         bodycont.style.flexDirection = 'row';
         bodycont. style.gap = '10px'
-        if(localStorage.length == 0){
         setTimeout(function(){
         let displayp =document.createElement("p");
         displayp.textContent ="Add some blogs?";
@@ -20,9 +21,16 @@
 
     },0);
 }
+else{
+    bodycont.style.flexDirection = 'column';
+        bodycont. style.gap = '10px'
+}
 
     
 export function startblogs(event){
+    if(bodycont.style.flexDirection = 'row'){
+        bodycont.style.flexDirection = 'column';
+    }
     let btn = event.target;
     let check = document.getElementById('subform');
     if(check != null){
