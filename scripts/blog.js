@@ -8,10 +8,11 @@
     let cancelbtn;
     let savebtn;
     console.log(maincont.childElementCount);
-    if(localStorage.length == 0){
+    
         bodycont.style.display = 'flex';
         bodycont.style.flexDirection = 'row';
         bodycont. style.gap = '10px'
+        if(localStorage.length == 0){
         setTimeout(function(){
         let displayp =document.createElement("p");
         displayp.textContent ="Add some blogs?";
