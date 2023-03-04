@@ -45,7 +45,6 @@ export function startblogs(event){
         savebtn.addEventListener('click',function(){
             let inputs = validateInputs();
             if(inputs != null){
-
             editExistingBlog(savebtn.id,inputs[0],inputs[1]);
             form.remove();
             }

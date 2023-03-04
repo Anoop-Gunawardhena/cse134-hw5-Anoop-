@@ -3,8 +3,6 @@ import {maincont,startblogs} from '../scripts/blog.js'
 let bloglisttemp = document.getElementById('bloglisttemp')
 let form = document.querySelector('form');
 export function addNewBlog (titletext, tostore) {
-    
-    
     window.localStorage.setItem(titletext,tostore)
     let list = document.getElementById('ul')
     createItem(titletext, tostore, list);
@@ -94,20 +92,16 @@ export function createItem(titletext, tostore, list){
 export function editExistingBlog(id,titletext,tostore){
     //console.log(btn);
     //let btntid = btn.id;
+    window.localStorage.removeItem(id)
     let btn = document.getElementById(id);
     let bloglistitem = btn.parentElement;
-
     //let btnid = parseInt(id);
     //btnid = btnid.toString();
    // let itemtoedit = document.querySelector(btnid);
     let paratoedit = bloglistitem.querySelector('.parag');
     let listcontainer = document.getElementById('listcontainer');
-    let dateval = date.value;
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
-    let titletext = title.value;
-    let tostore = '( '+ dateval + ' ) : '+ summary.value;
-    titletext = titletext.bold();
     paratoedit.innerHTML= titletext + tostore;
-
+    window.localStorage.setItem(titletext,tostore)
 
 }
