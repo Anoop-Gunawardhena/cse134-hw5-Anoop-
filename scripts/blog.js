@@ -1,6 +1,7 @@
 
     import {addNewBlog,buildList,editExistingBlog} from '../scripts/listhandler.js'
     export let maincont = document.getElementById('listcontainer');
+     buildList();
     let bodycont = document.getElementById('bodycontainer');
     let addbtn = document.getElementById('addbtn');
     let formtemplate = document.getElementById('formtemp');
@@ -18,7 +19,7 @@
 
     },0);
 }
-buildList();
+
     
 export function startblogs(event){
     let btn = event.target;
