@@ -38,13 +38,21 @@ export function startblogs(event){
         dbox.remove();
     });
     if (btn.id != 'addbtn'){
-        savebtn.id == btn.id;
+        savebtn.id = btn.id;
         console.log("id of button that called startblogs " + savebtn.id)
-        savebtn.addEventListener('click',editExistingBlog);
+        savebtn.addEventListener('click',function(){
+            form.remove();
+            editExistingBlog(savebtn.id);
+        });
     }
 
     else{
-    savebtn.addEventListener("click",addNewBlog)   //form.style.flexDirection = 'column';
+    console.log("id of button that called startblogs " + savebtn.id)
+    savebtn.addEventListener("click",function(){
+        form.remove();
+        addNewBlog();
+
+    })   //form.style.flexDirection = 'column';
 }
 }
 addbtn.style.width = '60px';

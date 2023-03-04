@@ -3,7 +3,6 @@ let count = 0;
 let bloglisttemp = document.getElementById('bloglisttemp')
 let form = document.querySelector('form');
 export function addNewBlog () {
-    form.remove();
     let title = document.getElementById('blogtitle');
     let date =  document.getElementById('blogdate');
     let summary = document.getElementById('blogsummary');
@@ -54,12 +53,10 @@ export function addNewBlog () {
     
 }
 
-export function editExistingBlog(event){
-    form.remove()
-    let btn = event.target;
-    console.log(btn);
-    let btntid = btn.id;
-    btnid = parseInt(btnid);
+export function editExistingBlog(id){
+    //console.log(btn);
+    //let btntid = btn.id;
+    btnid = parseInt(id);
     btnid = btnid.toString();
     let itemtoedit = document.getElementById(btnid);
     let paratoedit = itemtoedit.querySelector('p');
