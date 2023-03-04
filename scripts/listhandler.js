@@ -78,7 +78,6 @@ export function createItem(titletext, tostore, list){
     removebtn.innerHTML = '<b> Remove </b>'
     removebtn.style.border = 'none';
     removebtn.style.background = 'none';
-    remove
     bloglistitem.class = 'listitems';
     bloglistitem.id = titletext.toString() + tostore.toString();
     console.log('stored id is' + titletext + tostore);
