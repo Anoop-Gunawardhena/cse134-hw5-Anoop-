@@ -3,7 +3,7 @@ import {maincont,startblogs} from '../scripts/blog.js'
 let form = document.querySelector('form');
 export function addNewBlog (titletext, tostore) {
     window.localStorage.setItem(titletext.toString(),tostore.toString())
-    let list = document.getElementById('bloglist')
+    let list = document.getElementById('bloglist');
     createItem(titletext, tostore, list);
     //let lastfour = (dateval).substring(dateval.length-5,dateval.length-1);
     // let listclone = bloglisttemp.content.cloneNode(true)
@@ -79,7 +79,7 @@ export function createItem(titletext, tostore, list){
     removebtn.style.border = 'none';
     removebtn.style.background = 'none';
     bloglistitem.class = 'listitems';
-    bloglistitem.id = titletext.toString() + tostore.toString();
+    bloglistitem.id = titletext.toString();
     console.log('stored id is' + titletext + tostore);
     editbtn.id = titletext.toString();
     console.log("editbtn id is " + editbtn.id);
@@ -105,8 +105,9 @@ export function editExistingBlog(id,titletext,tostore){
     //console.log(btn);
     //let btntid = btn.id;
     window.localStorage.removeItem(id)
+    let list = document.getElementById('bloglist');
     let btn = document.getElementById(id);
-    let bloglistitem = btn.parentElement;
+    let bloglistitem = list.querySelector('#'+btn.id);
     console.log('bloglistitem id is ' + bloglistitem.id)
     //let btnid = parseInt(id);
     //btnid = btnid.toString();
