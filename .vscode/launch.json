@@ -4,12 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Open crud.html",
             "request": "launch",
             "type": "chrome",
             "file": "c:\\Users\\Anoop\\Documents\\CSE 134\\cse134-hw4-Anoop-\\pages\\crud.html"
 
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open methodtest.html",
+            "file": "c:\\Users\\Anoop\\Documents\\CSE 134\\cse134-hw5-Anoop-\\pages\\methodtest.html"
         },
         
         {

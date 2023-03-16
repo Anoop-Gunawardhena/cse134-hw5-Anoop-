@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "csrocky";
+    src: url("../fonts/Other/CsRocky-MVe9v.otf");
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Other/Montserrat-VariableFont_wght.ttf");
+}
+
+
+body{
+    background-color: darksalmon;
+    display: flex;
+    flex-direction: column;
+    font-family: "csrocky",'Times New Roman';
+    width: 100%;
+    margin:0;
+    gap:80px;
+    }
+#bannerbar{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: fit-content;
+    position: fixed;
+    z-index: 999;
+}
+header{
+    text-align: center;
+    align-items: center;
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height:20px;
+    background: dimgray;
+    border-style: solid;
+    border-width: thin;
+    width: 100%;
+    /*z-index: 999*/
+}
+
+nav{
+border-style: groove;
+border-width: thick;
+background-color: lightgray;
+position: fixed;
+top: 20px;
+left: 0px;
+right: 0px;
+height:fit-content;
+/*z-index: 999*/
+}
+#navlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    font-size: 0.6em;
+    list-style-position:inside;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    /*height: 100%;*/
+}
+
+.listitem{ 
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    font-style: italic;
+    width: 18%;
+    height: 100%;
+}
+
+form{
+    width: 60%;
+    position: relative;
+    left: 20%;
+}
+.formitem{
+    position: relative;
+    width: 50%;
+    left: 25%;
+    border: 3px solid black;
+}
+.smalllabel{
+    position: relative;
+    width:20%;
+    left: 40%;
+    text-align: center;
+}
+.formbutton{
+    border: 3px solid black;
+    position: relative;
+    width: 30%;
+    left: 35%;
+}
+textarea{
+    width: 90%;
+    border: 3px solid black;
+    position: relative;
+    left: 5%;
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="my portfolio">
+    <meta name="author" content="Anoop Gunawardhena">
+
+
+    <title>Anoop Gunawardhena</title>
+    <link rel="icon" type="image/x-icon" href="../images/fav.jpg">
+    <link rel="stylesheet" href="../styles/methodtest.css">
+
+</head>
+<body>
+    <div id ="bannerbar">
+        <header id ="head"> Date + time</header>
+        <nav class="topnav">
+            <ol id ="navlist"><li class ="listitem"><a class="active" href="/index.html" id ="home">Home</a>
+            </li>
+            <li class ="listitem" id ="inbetweener1"><a class = "active" href="pages/projects.html" id ="project">Projects</a>
+            </li>
+            <li class="listitem" id = "inbetweener2"><a class = "active" href="pages/aboutme.html" id = "aboutme">About me</a>
+            </li>
+            <li class ="listitem"><a class ="active" href="pages/methodtest.html" id="methodtest">Method Test</a>
+            </ol>
+        </nav>
+        </div>
+        <br>
+    <form>
+        <label for="id" class ="smalllabel">Record ID:</label>
+        <input type="number" id="id" name="id" class ="formitem">
+        <br>
+        <label for="article_name" class ="smalllabel">Article Name:</label>
+        <input type="text" id="article_name" name="article_name" class ="formitem" >
+        <br>
+        <label for="article_body" class ="smalllabel">Article Body:</label>
+        <textarea id="article_body" name="article_body" ></textarea>
+        <br>
+        <label for ="article_date" class ="smalllabel">Date:</label>
+        <input type="text" id ="article_date" name ="article_date" class ="formitem">
+        <br>
+        <button type="button" id="postBtn" class="formbutton">POST</button>
+        <br>
+        <button type="button" id="getBtn" class="formbutton">GET</button>
+        <br>
+        <button type="button" id="putBtn" class="formbutton">PUT</button>
+        <br>
+        <button type="button" id="deleteBtn" class="formbutton">DELETE</button>
+        <br>
+      </form>
+      <output id = 'response'>
+        <pre></pre>
+      </output>
+      <script type="module">
+        function newDate(){
+            var toreturn = new Date();
+            return toreturn.toDateString();
+        }
+        const postBtn = document.getElementById('postBtn');
+        const getBtn = document.getElementById('getBtn');
+        const putBtn = document.getElementById('putBtn');
+        const deleteBtn = document.getElementById('deleteBtn');
+        
+        const output = document.getElementById('response');
+        let jsonstring;
+        let recid;
+        let articlebod;
+        let articlename;
+       // let jsonObjects;
+        //let pre = output.querySelector('pre');
+
+        //console.log(pre);
+        postBtn.addEventListener('click', function() {
+         articlebod = document.getElementById('article_body').value;
+         articlename = document.getElementById('article_name').value;
+         recid = document.getElementById('id').value;
+        let tab = document.getElementById("outputtable");
+        if(tab != null){
+            tab.remove();
+        }
+        jsonstring = '';
+        const request = new XMLHttpRequest();
+        request.open('POST', 'https://httpbin.org/post');
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        const data = `id=${encodeURIComponent(recid)}&article_name=${encodeURIComponent(articlename)}&article_body=${encodeURIComponent(articlebod)}&date=${encodeURIComponent(newDate())}` ;     
+        request.onload = function() {
+            if (request.status === 200) {
+            //console.log(xhr.responseText);
+             jsonstring = request.responseText;
+            } else {
+            //console.log('Error:', xhr.statusText);
+             jsonstring = request.statusText;
+            }
+    
+                console.log(jsonstring);
+                //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
+                let jsonObject = JSON.parse(jsonstring);
+                console.log(jsonObject);
+                let table = document.createElement('table');
+                table.id ="outputtable"
+                let objecthead = table.insertRow();
+                let datarow = table.insertRow();
+                Object.keys(jsonObject).forEach(function(key) {
+                    let dataCell = datarow.insertCell();
+                    dataCell.style.border = "2px solid black"
+                    console.log("Here is potential object from key");
+                    console.log(typeof jsonObject[key]);
+                    if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
+                        console.log("This is an object");
+                        console.log(jsonObject[key]);
+                        let microtable = document.createElement('table');
+                        let microobjecthead = microtable.insertRow();
+                        let microdatarow = microtable.insertRow();
+                        let microObject = jsonObject[key];
+                        console.log(Object.keys(microObject));
+                        Object.keys(microObject).forEach(function(key) {
+                            let microcell = microdatarow.insertCell();
+                            microcell.innerText = microObject[key];
+                            microcell.style.border = "1px solid black";
+                            microcell.width = 'auto';
+                            let microobjectheadercell = microobjecthead.insertCell();
+                            microobjectheadercell.width = microcell.width;
+                            microobjectheadercell.innerHTML = key.bold();
+                            microobjectheadercell.style.border = "2px solid black"
+                            console.log("completed loop");
+                        })
+                        dataCell.width = 'auto';
+                        dataCell.appendChild(microtable);
+                    }
+                    else{
+                    if(typeof jsonObject[key] == 'object'){
+                        dataCell.innerText = "Empty";
+                    }
+                    else{
+                    dataCell.innerText = jsonObject[key];
+                    }
+                    dataCell.width = 'auto';
+                    }
+                    let headerCell = objecthead.insertCell();
+                    headerCell.width = dataCell.width;
+                    headerCell.style.border = "2px solid black"
+                    headerCell.innerHTML = key.bold();
+                    
+                    //headerCell.style.
+                });
+                table.style.border = "2px solid";
+                output.appendChild(table);
+                
+            };
+            request.send(data); 
+        });
+        
+        putBtn.addEventListener('click', function() {
+         articlebod = document.getElementById('article_body').value;
+         articlename = document.getElementById('article_name').value;
+         recid = document.getElementById('id').value;
+        let tab = document.getElementById("outputtable");
+        if(tab != null){
+            tab.remove();
+        }
+        jsonstring = '';
+        const request = new XMLHttpRequest();
+        request.open('PUT', 'https://httpbin.org/put');
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        const data = `id=${encodeURIComponent(recid)}&article_name=${encodeURIComponent(articlename)}&article_body=${encodeURIComponent(articlebod)}&date=${encodeURIComponent(newDate())}` ;     
+        request.onload = function() {
+            if (request.status === 200) {
+            //console.log(xhr.responseText);
+             jsonstring = request.responseText;
+            } else {
+            //console.log('Error:', xhr.statusText);
+             jsonstring = request.statusText;
+            }
+    
+                console.log(jsonstring);
+                //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
+                let jsonObject = JSON.parse(jsonstring);
+                console.log(jsonObject);
+                let table = document.createElement('table');
+                table.id ="outputtable"
+                let objecthead = table.insertRow();
+                let datarow = table.insertRow();
+                Object.keys(jsonObject).forEach(function(key) {
+                    let dataCell = datarow.insertCell();
+                    dataCell.style.border = "2px solid black"
+                    console.log("Here is potential object from key");
+                    console.log(typeof jsonObject[key]);
+                    if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
+                        console.log("This is an object");
+                        console.log(jsonObject[key]);
+                        let microtable = document.createElement('table');
+                        let microobjecthead = microtable.insertRow();
+                        let microdatarow = microtable.insertRow();
+                        let microObject = jsonObject[key];
+                        console.log(Object.keys(microObject));
+                        Object.keys(microObject).forEach(function(key) {
+                            let microcell = microdatarow.insertCell();
+                            microcell.innerText = microObject[key];
+                            microcell.style.border = "1px solid black";
+                            microcell.width = 'auto';
+                            let microobjectheadercell = microobjecthead.insertCell();
+                            microobjectheadercell.width = microcell.width;
+                            microobjectheadercell.innerHTML = key.bold();
+                            microobjectheadercell.style.border = "2px solid black"
+                            console.log("completed loop");
+                        })
+                        dataCell.width = 'auto';
+                        dataCell.appendChild(microtable);
+                    }
+                    else{
+                    if(typeof jsonObject[key] == 'object'){
+                        dataCell.innerText = "Empty";
+                    }
+                    else{
+                    dataCell.innerText = jsonObject[key];
+                    }
+                    dataCell.width = 'auto';
+                    }
+                    let headerCell = objecthead.insertCell();
+                    headerCell.width = dataCell.width;
+                    headerCell.style.border = "2px solid black"
+                    headerCell.innerHTML = key.bold();
+                    
+                    //headerCell.style.
+                });
+                table.style.border = "2px solid";
+                output.appendChild(table);
+                
+            };
+            request.send(data); 
+        });
+
+        getBtn.addEventListener('click', function() {
+        articlebod = document.getElementById('article_body').value;
+        articlename = document.getElementById('article_name').value;
+        recid = document.getElementById('id').value;
+        let tab = document.getElementById("outputtable");
+        if(tab != null){
+            tab.remove();
+        }
+        const request = new XMLHttpRequest();
+        request.open('GET', 'https://httpbin.org/get');
+        jsonstring = '';
+        let tosend = `id=${encodeURIComponent(recid)}`;
+        request.onload = function() {
+            if (request.status === 200) {
+            //console.log(xhr.responseText);
+             jsonstring = request.responseText;
+            } else {
+            //console.log('Error:', xhr.statusText);
+             jsonstring = request.statusText;
+            }
+    
+                console.log(jsonstring);
+                //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
+                let jsonObject = JSON.parse(jsonstring);
+                console.log(jsonObject);
+                let table = document.createElement('table');
+                table.id ="outputtable"
+                let objecthead = table.insertRow();
+                let datarow = table.insertRow();
+                Object.keys(jsonObject).forEach(function(key) {
+                    let dataCell = datarow.insertCell();
+                    dataCell.style.border = "2px solid black"
+                    console.log("Here is potential object from key");
+                    console.log(typeof jsonObject[key]);
+                    if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
+                        console.log("This is an object");
+                        console.log(jsonObject[key]);
+                        let microtable = document.createElement('table');
+                        let microobjecthead = microtable.insertRow();
+                        let microdatarow = microtable.insertRow();
+                        let microObject = jsonObject[key];
+                        console.log(Object.keys(microObject));
+                        Object.keys(microObject).forEach(function(key) {
+                            let microcell = microdatarow.insertCell();
+                            microcell.innerText = microObject[key];
+                            microcell.style.border = "1px solid black";
+                            microcell.width = 'auto';
+                            let microobjectheadercell = microobjecthead.insertCell();
+                            microobjectheadercell.width = microcell.width;
+                            microobjectheadercell.innerHTML = key.bold();
+                            microobjectheadercell.style.border = "2px solid black"
+                            console.log("completed loop");
+                        })
+                        dataCell.width = 'auto';
+                        dataCell.appendChild(microtable);
+                    }
+                    else{
+                    if(typeof jsonObject[key] == 'object'){
+                        dataCell.innerText = "Empty";
+                    }
+                    else{
+                    dataCell.innerText = jsonObject[key];
+                    }
+                    dataCell.width = 'auto';
+                    }
+                    let headerCell = objecthead.insertCell();
+                    headerCell.width = dataCell.width;
+                    headerCell.style.border = "2px solid black"
+                    headerCell.innerHTML = key.bold();
+                    
+                    //headerCell.style.
+                });
+                table.style.border = "2px solid";
+                output.appendChild(table);
+                
+            };
+        request.send(tosend);
+        });
+    deleteBtn.addEventListener('click', function() {
+        //articlebod = document.getElementById('article_body').value;
+        //articlename = document.getElementById('article_name').value;
+        //recid = document.getElementById('id').value;
+        let tab = document.getElementById("outputtable");
+        if(tab != null){
+            tab.remove();
+        }
+        const request = new XMLHttpRequest();
+        request.open('DELETE', 'https://httpbin.org/delete');
+        jsonstring = '';
+        request.onload = function() {
+            if (request.status === 200) {
+            //console.log(xhr.responseText);
+             jsonstring = request.responseText;
+            } else {
+            //console.log('Error:', xhr.statusText);
+             jsonstring = request.statusText;
+            }
+    
+                console.log(jsonstring);
+                //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
+                let jsonObject = JSON.parse(jsonstring);
+                console.log(jsonObject);
+                let table = document.createElement('table');
+                table.id ="outputtable"
+                let objecthead = table.insertRow();
+                let datarow = table.insertRow();
+                Object.keys(jsonObject).forEach(function(key) {
+                    let dataCell = datarow.insertCell();
+                    dataCell.style.border = "2px solid black"
+                    console.log("Here is potential object from key");
+                    console.log(typeof jsonObject[key]);
+                    if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
+                        console.log("This is an object");
+                        console.log(jsonObject[key]);
+                        let microtable = document.createElement('table');
+                        let microobjecthead = microtable.insertRow();
+                        let microdatarow = microtable.insertRow();
+                        let microObject = jsonObject[key];
+                        console.log(Object.keys(microObject));
+                        Object.keys(microObject).forEach(function(key) {
+                            let microcell = microdatarow.insertCell();
+                            microcell.innerText = microObject[key];
+                            microcell.style.border = "1px solid black";
+                            microcell.width = 'auto';
+                            let microobjectheadercell = microobjecthead.insertCell();
+                            microobjectheadercell.width = microcell.width;
+                            microobjectheadercell.innerHTML = key.bold();
+                            microobjectheadercell.style.border = "2px solid black"
+                            console.log("completed loop");
+                        })
+                        dataCell.width = 'auto';
+                        dataCell.appendChild(microtable);
+                    }
+                    else{
+                    if(typeof jsonObject[key] == 'object'){
+                        dataCell.innerText = "Empty";
+                    }
+                    else{
+                    dataCell.innerText = jsonObject[key];
+                    }
+                    dataCell.width = 'auto';
+                    }
+                    let headerCell = objecthead.insertCell();
+                    headerCell.width = dataCell.width;
+                    headerCell.style.border = "2px solid black"
+                    headerCell.innerHTML = key.bold();
+                    
+                    //headerCell.style.
+                });
+                table.style.border = "2px solid";
+                output.appendChild(table);
+                
+            };
+        request.send();
+        });
+                let form = document.querySelector('form');
+                let date = document.getElementById("article_date");
+                window.addEventListener("load", function() {
+                    form.style.border = "5px solid black";
+                    form.style.display = "flex";
+                    form.style.flexDirection =" column";
+                    form.style.backgroundColor ="grey";
+                    date.placeholder = newDate();
+                    setTimeout(function(){date.readOnly = true;
+                },0);}
+                )
+      </script>
+    </body>
+    </html>
