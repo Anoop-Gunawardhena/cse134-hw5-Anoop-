@@ -20,7 +20,9 @@
             </li>
             <li class="listitem" id = "inbetweener2"><a class = "active" href="pages/aboutme.html" id = "aboutme">About me</a>
             </li>
-            <li class ="listitem"><a class ="active" href="pages/methodtest.html" id="methodtest">Method Test</a>
+            <li class ="listitem"><a class ="active" href="pages/methodtest.html" id="methodtest">Method Test</a></li>
+            <li class="listitem"><a class="active" href="../pages/webcomponent.html" id ="webcomponent">Web component</a></li>
+
             </ol>
         </nav>
         </div>
@@ -68,7 +70,7 @@
        // let jsonObjects;
         //let pre = output.querySelector('pre');
 
-        //console.log(pre);
+        ////console.log(pre);
         postBtn.addEventListener('click', function() {
          articlebod = document.getElementById('article_body').value;
          articlename = document.getElementById('article_name').value;
@@ -84,17 +86,17 @@
         const data = `id=${encodeURIComponent(recid)}&article_name=${encodeURIComponent(articlename)}&article_body=${encodeURIComponent(articlebod)}&date=${encodeURIComponent(newDate())}` ;     
         request.onload = function() {
             if (request.status === 200) {
-            //console.log(xhr.responseText);
+            ////console.log(xhr.responseText);
              jsonstring = request.responseText;
             } else {
-            //console.log('Error:', xhr.statusText);
+            ////console.log('Error:', xhr.statusText);
              jsonstring = request.statusText;
             }
     
-                console.log(jsonstring);
+                //console.log(jsonstring);
                 //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
                 let jsonObject = JSON.parse(jsonstring);
-                console.log(jsonObject);
+                //console.log(jsonObject);
                 let table = document.createElement('table');
                 table.id ="outputtable"
                 let objecthead = table.insertRow();
@@ -102,16 +104,16 @@
                 Object.keys(jsonObject).forEach(function(key) {
                     let dataCell = datarow.insertCell();
                     dataCell.style.border = "2px solid black"
-                    console.log("Here is potential object from key");
-                    console.log(typeof jsonObject[key]);
+                    ////console.log("Here is potential object from key");
+                    ////console.log(typeof jsonObject[key]);
                     if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
-                        console.log("This is an object");
-                        console.log(jsonObject[key]);
+                        //console.log("This is an object");
+                        //console.log(jsonObject[key]);
                         let microtable = document.createElement('table');
                         let microobjecthead = microtable.insertRow();
                         let microdatarow = microtable.insertRow();
                         let microObject = jsonObject[key];
-                        console.log(Object.keys(microObject));
+                        //console.log(Object.keys(microObject));
                         Object.keys(microObject).forEach(function(key) {
                             let microcell = microdatarow.insertCell();
                             microcell.innerText = microObject[key];
@@ -121,7 +123,7 @@
                             microobjectheadercell.width = microcell.width;
                             microobjectheadercell.innerHTML = key.bold();
                             microobjectheadercell.style.border = "2px solid black"
-                            console.log("completed loop");
+                            //console.log("completed loop");
                         })
                         dataCell.width = 'auto';
                         dataCell.appendChild(microtable);
@@ -164,17 +166,17 @@
         const data = `id=${encodeURIComponent(recid)}&article_name=${encodeURIComponent(articlename)}&article_body=${encodeURIComponent(articlebod)}&date=${encodeURIComponent(newDate())}` ;     
         request.onload = function() {
             if (request.status === 200) {
-            //console.log(xhr.responseText);
+            ////console.log(xhr.responseText);
              jsonstring = request.responseText;
             } else {
-            //console.log('Error:', xhr.statusText);
+            ////console.log('Error:', xhr.statusText);
              jsonstring = request.statusText;
             }
     
-                console.log(jsonstring);
+                //console.log(jsonstring);
                 //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
                 let jsonObject = JSON.parse(jsonstring);
-                console.log(jsonObject);
+                //console.log(jsonObject);
                 let table = document.createElement('table');
                 table.id ="outputtable"
                 let objecthead = table.insertRow();
@@ -182,16 +184,16 @@
                 Object.keys(jsonObject).forEach(function(key) {
                     let dataCell = datarow.insertCell();
                     dataCell.style.border = "2px solid black"
-                    console.log("Here is potential object from key");
-                    console.log(typeof jsonObject[key]);
+                    //console.log("Here is potential object from key");
+                    //console.log(typeof jsonObject[key]);
                     if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
-                        console.log("This is an object");
-                        console.log(jsonObject[key]);
+                        //console.log("This is an object");
+                        //console.log(jsonObject[key]);
                         let microtable = document.createElement('table');
                         let microobjecthead = microtable.insertRow();
                         let microdatarow = microtable.insertRow();
                         let microObject = jsonObject[key];
-                        console.log(Object.keys(microObject));
+                        //console.log(Object.keys(microObject));
                         Object.keys(microObject).forEach(function(key) {
                             let microcell = microdatarow.insertCell();
                             microcell.innerText = microObject[key];
@@ -201,7 +203,7 @@
                             microobjectheadercell.width = microcell.width;
                             microobjectheadercell.innerHTML = key.bold();
                             microobjectheadercell.style.border = "2px solid black"
-                            console.log("completed loop");
+                            //console.log("completed loop");
                         })
                         dataCell.width = 'auto';
                         dataCell.appendChild(microtable);
@@ -243,17 +245,17 @@
         let tosend = `id=${encodeURIComponent(recid)}`;
         request.onload = function() {
             if (request.status === 200) {
-            //console.log(xhr.responseText);
+            ////console.log(xhr.responseText);
              jsonstring = request.responseText;
             } else {
-            //console.log('Error:', xhr.statusText);
+            ////console.log('Error:', xhr.statusText);
              jsonstring = request.statusText;
             }
     
-                console.log(jsonstring);
+                //console.log(jsonstring);
                 //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
                 let jsonObject = JSON.parse(jsonstring);
-                console.log(jsonObject);
+                //console.log(jsonObject);
                 let table = document.createElement('table');
                 table.id ="outputtable"
                 let objecthead = table.insertRow();
@@ -261,16 +263,16 @@
                 Object.keys(jsonObject).forEach(function(key) {
                     let dataCell = datarow.insertCell();
                     dataCell.style.border = "2px solid black"
-                    console.log("Here is potential object from key");
-                    console.log(typeof jsonObject[key]);
+                    //console.log("Here is potential object from key");
+                    //console.log(typeof jsonObject[key]);
                     if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
-                        console.log("This is an object");
-                        console.log(jsonObject[key]);
+                        //console.log("This is an object");
+                        //console.log(jsonObject[key]);
                         let microtable = document.createElement('table');
                         let microobjecthead = microtable.insertRow();
                         let microdatarow = microtable.insertRow();
                         let microObject = jsonObject[key];
-                        console.log(Object.keys(microObject));
+                        //console.log(Object.keys(microObject));
                         Object.keys(microObject).forEach(function(key) {
                             let microcell = microdatarow.insertCell();
                             microcell.innerText = microObject[key];
@@ -280,7 +282,7 @@
                             microobjectheadercell.width = microcell.width;
                             microobjectheadercell.innerHTML = key.bold();
                             microobjectheadercell.style.border = "2px solid black"
-                            console.log("completed loop");
+                            //console.log("completed loop");
                         })
                         dataCell.width = 'auto';
                         dataCell.appendChild(microtable);
@@ -320,17 +322,17 @@
         jsonstring = '';
         request.onload = function() {
             if (request.status === 200) {
-            //console.log(xhr.responseText);
+            ////console.log(xhr.responseText);
              jsonstring = request.responseText;
             } else {
-            //console.log('Error:', xhr.statusText);
+            ////console.log('Error:', xhr.statusText);
              jsonstring = request.statusText;
             }
     
-                console.log(jsonstring);
+                //console.log(jsonstring);
                 //jsonstring = jsonstring.substring(0,ind1+1)+ toinsert +jsonstring.substring(ind1+1,ind2 +1)+"\n ] \n"+jsonstring.substring(ind2+1, jsonstring.length) + "}";
                 let jsonObject = JSON.parse(jsonstring);
-                console.log(jsonObject);
+                //console.log(jsonObject);
                 let table = document.createElement('table');
                 table.id ="outputtable"
                 let objecthead = table.insertRow();
@@ -338,16 +340,16 @@
                 Object.keys(jsonObject).forEach(function(key) {
                     let dataCell = datarow.insertCell();
                     dataCell.style.border = "2px solid black"
-                    console.log("Here is potential object from key");
-                    console.log(typeof jsonObject[key]);
+                    //console.log("Here is potential object from key");
+                    //console.log(typeof jsonObject[key]);
                     if( jsonObject[key] != null &&(typeof jsonObject[key] == "object" && JSON.stringify(jsonObject[key]) != "{}" )){
-                        console.log("This is an object");
-                        console.log(jsonObject[key]);
+                        //console.log("This is an object");
+                        //console.log(jsonObject[key]);
                         let microtable = document.createElement('table');
                         let microobjecthead = microtable.insertRow();
                         let microdatarow = microtable.insertRow();
                         let microObject = jsonObject[key];
-                        console.log(Object.keys(microObject));
+                        //console.log(Object.keys(microObject));
                         Object.keys(microObject).forEach(function(key) {
                             let microcell = microdatarow.insertCell();
                             microcell.innerText = microObject[key];
@@ -357,7 +359,7 @@
                             microobjectheadercell.width = microcell.width;
                             microobjectheadercell.innerHTML = key.bold();
                             microobjectheadercell.style.border = "2px solid black"
-                            console.log("completed loop");
+                            //console.log("completed loop");
                         })
                         dataCell.width = 'auto';
                         dataCell.appendChild(microtable);

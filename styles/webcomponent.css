@@ -72,33 +72,3 @@ height:fit-content;
     width: 10%;
     height: 100%;
 }
-
-form{
-    width: 60%;
-    position: relative;
-    left: 20%;
-}
-.formitem{
-    position: relative;
-    width: 50%;
-    left: 25%;
-    border: 3px solid black;
-}
-.smalllabel{
-    position: relative;
-    width:20%;
-    left: 40%;
-    text-align: center;
-}
-.formbutton{
-    border: 3px solid black;
-    position: relative;
-    width: 30%;
-    left: 35%;
-}
-textarea{
-    width: 90%;
-    border: 3px solid black;
-    position: relative;
-    left: 5%;
-}

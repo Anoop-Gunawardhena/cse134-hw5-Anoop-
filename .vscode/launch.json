@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "name": "Open crud.html",
             "request": "launch",
@@ -17,6 +18,13 @@
             "request": "launch",
             "name": "Open methodtest.html",
             "file": "c:\\Users\\Anoop\\Documents\\CSE 134\\cse134-hw5-Anoop-\\pages\\methodtest.html"
+        },
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open webcomponent.html",
+            "file": "c:\\Users\\Anoop\\Documents\\CSE 134\\cse134-hw5-Anoop-\\pages\\webcomponent.html"
         },
         
         {
